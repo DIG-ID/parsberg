@@ -1,0 +1,30 @@
+.section-st-project.section-form
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 200px 0 150px
+    background: $main-color
+    color: $text-color
+    .wpcf7
+        .wpcf7-form
+            label
+                span:nth-child(1)
+                    display: block
+                    margin-bottom: 10px
+                span:nth-child(2)
+                    margin-bottom: 30px
+    .section__subtitle
+        line-height: 44px
+        margin-bottom: 60px
+        color: $text-color
+
+.section-st-kontakt
+    .section
+        &__description
+            margin-top: 20px
+
+@include media-breakpoint-up(lg)
+    .section-st-kontakt
+        .section
+            &__description
+                max-width: 75%

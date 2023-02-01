@@ -1,0 +1,259 @@
+#main-header
+  .navbar
+    .site-branding
+      .site-logo
+        svg
+          max-width: 40px
+          height: auto
+          fill: $text-color
+    &__light, &__dark
+      .site-branding
+          .site-logo
+            path
+              fill: $main-color !important
+  
+.navbar-nav
+  .menu-item
+    .nav-link
+      font-family: $main-font
+      font-size: 16px
+      font-weight: 300
+      line-height: 1
+      color: #445659
+      text-decoration: none
+      &:hover
+        color: #DEE3E4
+  &__light
+    .menu-item
+      .nav-link
+        color: #445659
+        &:hover
+          color: #DEE3E4
+  &__dark
+    .menu-item
+      .nav-link
+        color: #DEE3E4
+        &:hover
+          color: $main-color
+
+@include media-breakpoint-up(lg)
+  #main-header
+    .navbar
+      transition: all .4s ease-in-out
+      padding-top: 35px
+      padding-bottom: 40px
+    .navbar-collapse
+      justify-content: flex-end
+    .navbar-nav
+      .nav-link
+        padding-right: 1.6rem
+        padding-left: 1.6rem
+    .menu-button
+      &__start
+        .nav-link
+          background-color: $accent-color
+          font-size: 12px !important
+          font-weight: 400
+          line-height: 16px
+          text-transform: uppercase
+          color: #F7F7F7 !important
+          border-radius: 30px
+          padding: 1.1rem 3rem 0.9rem !important
+          margin-left: 3rem
+          box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%) !important
+
+  #main-header.sticky
+    .navbar
+      padding-top: 20px
+      padding-bottom: 20px
+      background-color: $bg-color
+      box-shadow: 0px -1px 4px 0px rgb(0 0 0 / 20%)
+      .site-branding
+        .site-logo
+          path
+            fill: $main-color !important
+      .nav-link
+          color: #445659
+          &:hover
+            color: $main-color
+      &__light
+        background-color: $dark-color
+        .nav-link
+          color: #DEE3E4
+          &:hover
+            color: $main-color
+      &__dark
+        background-color: $bg-color
+        .nav-link
+          color: #445659
+          &:hover
+            color: $main-color
+      .navbar-actions
+        .navbar-toggler
+          .icon-left,
+          .icon-right
+            background-color: #fff
+            &::before,
+            &::after
+              background-color: $main-color
+            &:not(.collapsed)
+              background-color: $main-color
+
+@include media-breakpoint-between(lg, xl)
+  #main-header
+    .navbar-nav
+      .nav-link
+        padding-right: 1.2rem
+        padding-left: 1.2rem
+
+
+@include media-breakpoint-down(lg)
+  .animated-icon2
+    width: 30px
+    height: 20px
+    position: relative
+    margin: 0px
+    -webkit-transform: rotate(0deg)
+    -moz-transform: rotate(0deg)
+    -o-transform: rotate(0deg)
+    transform: rotate(0deg)
+    -webkit-transition: .5s ease-in-out
+    -moz-transition: .5s ease-in-out
+    -o-transition: .5s ease-in-out
+    transition: .5s ease-in-out
+    cursor: pointer
+    span
+      background: $dark-color
+      display: block
+      position: absolute
+      height: 3px
+      width: 100%
+      border-radius: 9px
+      opacity: 1
+      left: 0
+      -webkit-transform: rotate(0deg)
+      -moz-transform: rotate(0deg)
+      -o-transform: rotate(0deg)
+      transform: rotate(0deg)
+      -webkit-transition: .25s ease-in-out
+      -moz-transition: .25s ease-in-out
+      -o-transition: .25s ease-in-out
+      transition: .25s ease-in-out
+      &:nth-child(1)
+        top: 0px
+      &:nth-child(2)
+        top: 10px
+      &:nth-child(3)
+        top: 10px
+      &:nth-child(4)
+        top: 20px
+  .animated-icon2.open
+    span
+      background: $main-color
+      &:nth-child(1)
+        top: 11px
+        width: 0%
+        left: 50%
+      &:nth-child(2)
+        -webkit-transform: rotate(45deg)
+        -moz-transform: rotate(45deg)
+        -o-transform: rotate(45deg)
+        transform: rotate(45deg)
+      &:nth-child(3)
+        -webkit-transform: rotate(-45deg)
+        -moz-transform: rotate(-45deg)
+        -o-transform: rotate(-45deg)
+        transform: rotate(-45deg)
+      &:nth-child(4)
+        top: 11px
+        width: 0%
+        left: 50%
+
+  #main-header
+    .navbar
+      padding: 40px 15px 30px
+      background-color: transparent
+      transition: all 300ms ease-in-out
+      .navbar-collapse
+          padding: 60px 0
+      &.nav-open
+        background-color: $dark-color
+        .navbar-toggler-icon
+          /*color: white*/
+        .site-branding
+          .site-logo
+            svg
+              fill: $main-color
+      .site-branding
+        .navbar-brand
+          display: block
+          .custom-logo
+            width: 100%
+            object-fit: cover
+            transition: all 600ms ease-in-out
+            path
+              transition: all 600ms ease-in-out
+    .navbar-nav
+      position: relative
+      min-height: calc(100vh - 118px)
+      align-items: flex-end !important
+      .nav-link
+        color: $main-color
+        text-align: right
+    .navbar-actions
+      display: flex
+      align-items: center
+      .navbar-toggler
+        position: relative
+        width: 30px
+        height: 30px
+        padding: 0
+        transition-duration: 0.5s
+        outline: none
+        box-shadow: none
+        border: 0
+        &:focus,
+        &:active
+          outline: none
+          box-shadow: none
+          border: 0
+        &:not(.collapsed)
+          .icon-left
+            transition-duration: 0.5s
+            background-color: transparent
+            &::before
+              transform: rotateZ(45deg) scaleX(1.4) translate(1px, 1px)
+            &::after
+              transform: rotateZ(-45deg) scaleX(1.4) translate(1px, -1px)
+          .icon-right
+            transition-duration: 0.5s
+            background-color: transparent
+            &::before
+              transform: rotateZ(-45deg) scaleX(1.4) translate(-1px, 1px)
+            &::after
+              transform: rotateZ(45deg) scaleX(1.4) translate(-1px, -1px)
+    .menu-button
+      &__start
+        position: absolute
+        bottom: 75px
+        width: 100%
+        text-align: center
+        .nav-link
+          display: inline-block
+          background-color: $accent-color
+          font-size: 12px !important
+          font-weight: 400
+          line-height: 16px
+          text-transform: uppercase
+          color: #F7F7F7 !important
+          border-radius: 30px
+          padding: 1.1rem 3rem 0.9rem !important
+          margin-top: 1rem
+          box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%) !important
+
+  #main-header.sticky
+    .navbar
+      background-color: $bg-color
+      box-shadow: 0px -1px 4px 0px rgb(0 0 0 / 20%)
+      &.nav-open
+        background-color: $dark-color

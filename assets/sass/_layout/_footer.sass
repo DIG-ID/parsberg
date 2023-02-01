@@ -1,0 +1,115 @@
+.main-footer
+  background: linear-gradient(to right, $dark-color 0%, $dark-color 50%, $main-color 50%, $main-color 100%)
+  .footer-title
+    font-size: 16px
+    letter-spacing: 0.7998px
+    text-transform: uppercase
+    margin-bottom: 25px
+    color: $bg-color
+  .footer-left
+    padding-top: 75px
+    padding-bottom: 60px
+    color: $bg-color
+    svg
+      max-width: 40px
+      height: auto
+      margin-bottom: 40px
+      fill: $main-color
+    .address
+      display: flex
+      margin-bottom: 40px
+      &__ch
+        margin-right: 60px
+      &__title
+        font-size: 14px
+        font-weight: 500
+        letter-spacing: 0.3999px
+        color: $main-color
+      p
+        font-size: 14px
+        letter-spacing: 0.36px
+    .socials-wrapper
+      display: flex
+      flex-direction: column
+      margin-bottom: 80px
+      a
+        display: inline-block
+        font-family: $main-font
+        font-size: 14px
+        font-weight: 300
+        text-decoration: none
+        line-height: 25px
+        letter-spacing: 0.36px
+        margin-bottom: 5px
+        color: $main-color
+        transition: all .3s ease-in
+        &:hover
+          color: $accent-color
+    &-bottom
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .copyright
+        font-size: 12px
+        font-weight: 400
+        letter-spacing: 0.6px
+        margin-bottom: 0
+        color: $dark-accent
+      .menu-footer-menu-container
+        .footer-nav
+          margin: 0
+          padding: 0
+          list-style: none
+          display: flex
+          .menu-item
+            &::after
+              content: '|'
+              display: inline-block
+              margin: 0 5px
+              color: $dark-accent
+            &:last-of-type
+              &::after
+                display: none
+            a
+              font-size: 12px
+              font-weight: 400
+              letter-spacing: 0.6px
+              text-decoration: none
+              margin-bottom: 0
+              transition: all .3s ease-in
+              color: $dark-accent
+              &:hover
+                color: $accent-color
+  .footer-right
+    padding-top: 75px
+    padding-bottom: 60px
+    color: $dark-color
+    .contacts
+      display: flex
+      flex-direction: column
+      a
+        display: inline-block
+        font-family: $main-font
+        font-weight: 300
+        font-size: 14px
+        line-height: 25px
+        letter-spacing: 0.36px
+        text-decoration: none
+        transition: all .3s ease-in
+        color: $dark-color
+        &:hover
+          color: $accent-color
+
+@include media-breakpoint-down(lg)
+  .main-footer
+    background: linear-gradient(to bottom, $main-color 0%, $main-color 30%, $dark-color 30%, $dark-color 100%)
+    .footer-left
+      order: 2
+      .address
+        display: block
+    .footer-right
+      order: 1
+
+@include media-breakpoint-down(sm)
+  .main-footer
+    background: linear-gradient(to bottom, $main-color 0%, $main-color 30%, $dark-color 30%, $dark-color 100%)
