@@ -21,18 +21,6 @@ function parsberg_theme_setup() {
 
 	add_image_size( 'single-case-studie-featured-image', 1320, 720, array( 'center', 'center' ) );
 
-	add_image_size( 'single-project-featured-image', 1320, 720, array( 'center', 'center' ) );
-
-	add_image_size( 'single-project-image', 760, 9999, array( 'center', 'center' ) );
-
-	add_image_size( 'single-featured-image', 770, 420, array( 'center', 'center' ) );
-
-	add_image_size( 'card-post-thumbnail', 426, 314, array( 'center', 'center' ) );
-
-	add_image_size( 'card-project-thumbnail-portrait', 646, 733, array( 'center', 'center' ) );
-
-	add_image_size( 'card-project-thumbnail-landscape', 646, 422, array( 'center', 'center' ) );
-
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
 }
@@ -53,18 +41,6 @@ function parsberg_theme_footer_widgets_init() {
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		),
-	);
-
-	register_sidebar(
-		array(
-			'name'          => __( 'Main Sidebar', 'parsberg' ),
-			'id'            => 'sidebar-1',
-			'description'   => __( 'Widgets in this area will be shown on all posts.', 'parsberg' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		)
 	);
 
 }

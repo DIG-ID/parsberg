@@ -1,11 +1,5 @@
 <?php
 /**
- * The custom theme tags file.
- */
-
-
-
-/**
  * Get our socials from the theme customizer and display them.
  */
 function parsberg_theme_socials() {
@@ -30,79 +24,43 @@ add_action( 'socials', 'parsberg_theme_socials' );
 /**
  * This function open the main content.
  */
-function theme_before_main_content() {
+function parsberg_theme_before_main_content() {
 	?>
 	<main id="main-content" class="main-content">
 	<?php
 }
 
-add_action( 'before_main_content', 'theme_before_main_content' );
+add_action( 'before_main_content', 'parsberg_theme_before_main_content' );
 
 /**
  * This function closes the main content.
  */
-function theme_after_main_content() {
+function parsberg_theme_after_main_content() {
 	?>
 	</main><!-- #main-content-->
 	<?php
 }
 
-add_action( 'after_main_content', 'theme_after_main_content' );
+add_action( 'after_main_content', 'parsberg_theme_after_main_content' );
 
 /**
  * This function open the post content.
  */
-function theme_before_post_content() {
+function parsberg_theme_before_post_content() {
 	?>
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 }
 
-add_action( 'before_post_content', 'theme_before_post_content' );
+add_action( 'before_post_content', 'parsberg_theme_before_post_content' );
 
 /**
  * This function closes the post content.
  */
-function theme_after_post_content() {
+function parsberg_theme_after_post_content() {
 	?>
 	</article><!-- #article -->
 	<?php
 }
 
-add_action( 'after_post_content', 'theme_after_post_content' );
-
-/**
- * This function gets the current project related service.
- */
-function parsberg_get_related_services() {
-	if ( is_archive( 'projects' ) ) :
-		$pod = pods( 'projects', get_the_id() );
-	else :
-		$pod = pods( 'case_studies', get_the_id() );
-	endif;
-	$rpods = $pod->field( 'related_services' );
-	if ( ! empty( $rpods ) ) :
-		$rnames = array();
-		foreach ( $rpods as $rpod ) :
-			$rpod_id  = $rpod['ID'];
-			$rnames[] = get_post_field( 'post_name', $rpod_id  );
-		endforeach;
-		$rnames = esc_attr( implode( ' ', $rnames ) );
-		return $rnames;
-	endif;
-}
-
-/**
- * This function gets the current post related categorie.
- */
-function parsberg_get_related_categories() {
-	$c = get_the_category( get_the_id() );
-	if ( $c ) :
-		$cnames = array();
-		foreach ( $c as $c_id ) :
-			$cnames[] = $c_id->slug;
-		endforeach;
-		$cnames = esc_attr( implode( ' ', $cnames ) );
-		return $cnames;
-	endif;
-}
+add_action( 'after_post_content', 'parsberg_theme_after_post_content' );

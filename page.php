@@ -1,12 +1,11 @@
 <?php
-get_header( 'light' );
+get_header();
 	do_action( 'before_main_content' );
 	if ( have_posts() ) :
 		do_action( 'before_post_content' );
 		while ( have_posts() ) :
 			the_post();
-			get_template_part( 'template-parts/pages/default/page', 'intro' );
-			get_template_part( 'template-parts/pages/default/page', 'content' );
+			//get_template_part( 'template-parts/pages/default/page', 'intro' );
 		endwhile;
 		do_action( 'after_post_content' );
 	endif;
