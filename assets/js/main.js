@@ -1,5 +1,5 @@
-import bootstrap from 'bootstrap';
-
-import "./menu";
 import "./swiper";
+import "./gsap";
+import "./fancybox";
+import "./menu";
 import "./nav-sticky";

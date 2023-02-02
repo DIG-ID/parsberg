@@ -1,6 +1,7 @@
 // webpack.mix.js
 
 let mix = require('laravel-mix');
+require('mix-tailwindcss');
 
 mix
   .setPublicPath('dist')
@@ -10,6 +11,7 @@ mix
   })
   .js('assets/js/main.js', 'dist')
   .sass('assets/sass/main.sass', 'dist')
+  .tailwind()
 
   .disableNotifications()
   .browserSync({
