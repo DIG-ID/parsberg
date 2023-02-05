@@ -1,12 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './header.php',
-    './footer.php',
-    './inc/*.php',
-    './page-templates/**/*.php',
-    './template-parts/**/*.php',
-  ],
+  content: [],
   theme: {
     colors: {
       'main-green': '#2E5659',
