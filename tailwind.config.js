@@ -16,6 +16,9 @@ module.exports = {
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
     },
+    letterSpacing: {
+      widest: '.11em',
+    },
     extend: {},
   },
   plugins: [],

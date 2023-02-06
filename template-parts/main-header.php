@@ -1,14 +1,14 @@
 <header id="main-header" class="main-header fixed w-full z-40 pt-10" itemscope itemtype="http://schema.org/WebSite">
 	<nav class="navbar fixed-top navbar-expand-lg" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'parsberg' ); ?>">
 		<div class="container mx-auto">
-			<div class="columns-3 flex justify-between items-center">
-				<button class="" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<div class="columns-3 flex justify-between items-start">
+				<button class="text-main-beige text-sm button" type="button">
 					<?php esc_html_e( 'Menu', 'parsberg' ); ?>
 				</button>
-				<div class="site-branding">
-					<a class="site-logo" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>"><?php get_template_part( 'template-parts/main-logo' ); ?></a>
-				</div>
-				<button><?php esc_html_e( 'Jetzt Buchen', 'parsberg' ); ?></button>
+				<a class="site-logo" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>"><?php get_template_part( 'template-parts/main-logo' ); ?></a>
+				<button class="bg-main-green text-main-beige text-sm font-normal tracking-widest uppercase no-underline py-3.5 px-5 button" type="button">
+					<?php esc_html_e( 'Jetzt Buchen', 'parsberg' ); ?>
+				</button>
 				<!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<?php
 					/*wp_nav_menu(
