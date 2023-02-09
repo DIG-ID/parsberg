@@ -1,0 +1,13 @@
+.main-header
+  transition: all 0.6s ease-in-out
+  #main-logo
+    transition: all 0.5s ease-in-out
+    opacity: 1
+    visibility: visible
+  &--scrolled
+    padding-top: 20px
+    background-color: var(--bg-color)
+    #main-logo
+      transform: translateY(-100%)
+      opacity: 0
+      visibility: hidden

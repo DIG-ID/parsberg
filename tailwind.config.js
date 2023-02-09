@@ -12,6 +12,7 @@ module.exports = {
       'main-green': '#2E5659',
       'main-beige': '#CBA884',
       'bg-color': '#EADCCE',
+      'white': '#FFFFFF',
     },
     fontFamily: {
       sans: ['Montserrat', 'sans-serif'],
