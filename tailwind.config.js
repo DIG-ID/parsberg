@@ -18,6 +18,7 @@ module.exports = {
       sans: ['Montserrat', 'sans-serif'],
     },
     letterSpacing: {
+      wider: '0.05em',
       widest: '.11em',
     },
     extend: {},

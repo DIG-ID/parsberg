@@ -17,8 +17,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 
     let headertl = gsap.timeline();
-
-    headertl.to(".site-logo", {
+    headertl.to(".main-header", {
       scrollTrigger: {
         trigger: '.main-header',
         start: 'top top',
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
         toggleClass: {className: 'main-header--scrolled', targets: '.main-header'},
       }
     });
-
 
   }, false);
 });
