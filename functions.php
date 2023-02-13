@@ -297,7 +297,6 @@ add_filter( 'post_thumbnail_html', 'parsberg_wrap_post_thumbnail_in_figure', 10,
 // Remove <p> from Contact Form 7
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
-
 /**
  * Add a Custom Title and Description to an Archive Page Using ACF Pro.
  */
@@ -328,6 +327,19 @@ function parsberg_create_option_page_for_cpt() {
 }
 
 add_action( 'acf/init', 'parsberg_create_option_page_for_cpt' );
+
+/**
+ * Lowers the metabox priority to 'core' for Yoast SEO's metabox.
+ *
+ * @param string $priority The current priority.
+ *
+ * @return string $priority The potentially altered priority.
+ */
+function parsber_theme_lower_yoast_metabox_priority( $priority ) {
+	return 'core';
+}
+
+add_filter( 'wpseo_metabox_prio', 'parsber_theme_lower_yoast_metabox_priority' );
 
 // Theme custom Walker.
 require get_template_directory() . '/inc/theme-custom-walker.php';

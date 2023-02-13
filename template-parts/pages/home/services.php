@@ -18,7 +18,7 @@
 	<?php
 	$image = get_field( 'services_section_image' );
 	if ( ! empty( $image ) ) :
-		echo '<div class="image-wrapper col-span-6"><img class="w-full object-cover" src="'. esc_url( $image['url'] ) . '" alt="' . esc_attr( $image['alt'] ) . '" /></div>';
+		echo '<div class="image-wrapper col-span-6 relative"><span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-screen"></span><img class="w-full object-cover max-h-[650px]" src="'. esc_url( $image['url'] ) . '" alt="' . esc_attr( $image['alt'] ) . '" /></div>';
 	endif;
 	?>
 </section>
