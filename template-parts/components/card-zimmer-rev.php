@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid grid-cols-12 mb-24 min-h-[560px] lg:mr-8 lg:gap-8' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid grid-cols-12 mb-24 min-h-[560px] max-h-[560px] lg:mr-8 lg:gap-8' ); ?>>
 <?php
 	if ( has_post_thumbnail() ) :
 		?>

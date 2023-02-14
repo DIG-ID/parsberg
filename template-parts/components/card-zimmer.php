@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid grid-cols-12 mb-24 min-h-[560px] lg:ml-8 lg:gap-8' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid grid-cols-12 mb-24 min-h-[560px] max-h-[560px] lg:ml-8 lg:gap-8' ); ?>>
 	<div class="content col-start-2 col-span-3 flex flex-col justify-between h-full">
 		<div class="details">
 			<h2 class="text-3xl text-main-green font-bold mb-20"><?php the_title(); ?></h2>
