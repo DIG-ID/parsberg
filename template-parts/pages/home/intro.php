@@ -14,20 +14,8 @@
 	</div>
 	<?php
 	$image = get_field( 'intro_section_image' );
-	if ( $image ) :
-			// Image variables.
-			//var_dump($image);
-			$url = $image['url'];
-			$alt = $image['alt'];
-			// Thumbnail size attributes.
-			$size = 'large';
-			$thumb = $image['sizes'][ $size ];
-		?>
-		<div class="img-wrapper relative">
-			<span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-screen"></span>
-			<img class="w-full min-h-[375px] object-cover lg:max-h-[650px]" src="<?php echo esc_url($thumb); ?>" alt="<?php echo esc_attr($alt); ?>">
-		</div>
-		<?php
+	if ( ! empty( $image ) ) :
+		echo '<div class="image-wrapper relative"><span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-screen"></span><img class="w-full min-h-[375px] object-cover lg:max-h-[650px]" src="' . esc_url( $image['url'] ) . '" alt="' . esc_attr( $image['alt'] ) . '" /></div>';
 	endif;
 	?>
 </section>

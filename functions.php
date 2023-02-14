@@ -341,6 +341,18 @@ function parsber_theme_lower_yoast_metabox_priority( $priority ) {
 
 add_filter( 'wpseo_metabox_prio', 'parsber_theme_lower_yoast_metabox_priority' );
 
+/**
+ * Remove the "Archives:" from a custom post type archive page title.
+ */
+function parsberg_theme_remove_archive_prefix( $title ) {
+	if ( is_post_type_archive( 'zimmer' ) ) {
+			$title = post_type_archive_title( '', false );
+	}
+	return $title;
+}
+
+add_filter( 'get_the_archive_title', 'parsberg_theme_remove_archive_prefix' );
+
 // Theme custom Walker.
 require get_template_directory() . '/inc/theme-custom-walker.php';
 
