@@ -11,7 +11,7 @@
 	if ( has_post_thumbnail() ) :
 		?>
 		<div class="image-wrapper relative col-span-8">
-			<span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-screen"></span>
+			<span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-lighten"></span>
 			<img class="w-full object-cover" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_caption(); ?>">
 		</div>
 		<?php

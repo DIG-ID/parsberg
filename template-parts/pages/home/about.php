@@ -2,7 +2,7 @@
 	<?php
 	$image = get_field( 'about_us_section_image' );
 	if ( ! empty( $image ) ) :
-		echo '<div class="image-wrapper col-span-1 mb-16 relative lg:mb-0 lg:col-span-7"><span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-screen"></span><img class="w-full object-cover max-h-[650px]" src=" '. esc_url( $image['url'] ) . '" alt="' . esc_attr( $image['alt'] ) . '" /></div>';
+		echo '<div class="image-wrapper col-span-1 mb-16 relative lg:mb-0 lg:col-span-7"><span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-lighten"></span><img class="w-full object-cover max-h-[650px]" src=" '. esc_url( $image['url'] ) . '" alt="' . esc_attr( $image['alt'] ) . '" /></div>';
 	endif;
 	?>
 	<div class="about-content col-span-1 lg:col-start-9 lg:col-span-3">
