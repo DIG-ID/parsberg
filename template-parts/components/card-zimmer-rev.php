@@ -1,10 +1,10 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid grid-cols-12 mb-24 min-h-[560px] max-h-[560px] lg:mr-8 lg:gap-8' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid grid-cols-12 mb-24 min-h-[560px] lg:mr-8 lg:gap-8' ); ?>>
 <?php
 	if ( has_post_thumbnail() ) :
 		?>
 		<div class="image-wrapper relative col-span-8">
 			<span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-lighten"></span>
-			<img class="w-full object-cover" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_caption(); ?>">
+			<img class="w-full object-cover max-h-[560px]" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_caption(); ?>">
 		</div>
 		<?php
 	endif;
