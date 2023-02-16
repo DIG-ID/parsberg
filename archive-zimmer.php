@@ -4,7 +4,6 @@ do_action( 'before_main_content' );
 get_template_part( 'template-parts/archives/zimmer/intro' );
 if ( have_posts() ) :
 	$c = 0;
-	do_action( 'before_post_content' );
 	while ( have_posts() ) :
 		the_post();
 		$c++;
@@ -14,7 +13,8 @@ if ( have_posts() ) :
 			get_template_part( 'template-parts/components/card', 'zimmer' );
 		endif;
 	endwhile;
-	do_action( 'after_post_content' );
 endif;
+get_template_part( 'template-parts/modules/direct-booking' );
+get_template_part( 'template-parts/modules/services' );
 do_action( 'after_main_content' );
 get_footer();

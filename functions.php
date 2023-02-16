@@ -334,6 +334,25 @@ function parsberg_create_option_page_for_cpt() {
 add_action( 'acf/init', 'parsberg_create_option_page_for_cpt' );
 
 /**
+ * Create a customized options page and store the data in a variable for later use
+ */
+function parsberg_theme_acf_op_gc_init() {
+	if ( function_exists( 'acf_add_options_page' ) ) :
+		$option_page = acf_add_options_page(
+			array(
+				'page_title' => __( 'Parsberg General Content', 'parsberg' ),
+				'menu_title' => __( 'General Content', 'parsberg' ),
+				'menu_slug'  => 'parsberg-theme-general-content',
+				'capability' => 'edit_posts',
+				'redirect'   => false,
+			)
+		);
+	endif;
+}
+
+add_action( 'acf/init', 'parsberg_theme_acf_op_gc_init' );
+
+/**
  * Lowers the metabox priority to 'core' for Yoast SEO's metabox.
  *
  * @param string $priority The current priority.
