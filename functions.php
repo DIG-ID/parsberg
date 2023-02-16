@@ -21,6 +21,8 @@ function parsberg_theme_setup() {
 
 	add_image_size( 'single-case-studie-featured-image', 1320, 720, array( 'center', 'center' ) );
 
+	add_image_size( 'gallery-image', 300, 300, array( 'center', 'center' ) );
+
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
 
 }

@@ -2,7 +2,8 @@
     <div class="container grid grid-cols-4 gap-4 lg:mx-auto">
         <div class="col-span-1"></div>
         <div class="col-span-2 section-form">
-            <?php echo do_shortcode( '[contact-form-7 id="82" title="Kontakt Page Form"]' ); ?>
+            <?php $kontakt_form = get_field( 'contact_form_shortcode' );?>
+			<?php echo do_shortcode( $kontakt_form ); ?>
         </div>
         <div class="col-span-1"></div>
     </div>
