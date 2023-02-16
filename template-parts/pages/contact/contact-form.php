@@ -1,7 +1,7 @@
-<section class="contact_form-section pt-24 pb-24 bg-main-green">
-    <div class="container grid grid-cols-4 gap-4 lg:mx-auto">
+<section class="contact_form-section pt-24 pb-24 bg-darker-green">
+    <div class="container grid grid-cols-1 lg:grid-cols-4 gap-0 lg:gap-4 lg:mx-auto">
         <div class="col-span-1"></div>
-        <div class="col-span-2 section-form">
+        <div class="col-span-1 px-8 lg:px-0 lg:col-span-2 section-form">
             <?php $kontakt_form = get_field( 'contact_form_shortcode' );?>
 			<?php echo do_shortcode( $kontakt_form ); ?>
         </div>
