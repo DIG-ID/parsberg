@@ -1,4 +1,4 @@
-<footer class="main-footer bg-main-green text-main-beige">
+<footer class="main-footer bg-darker-green text-main-beige">
 	<div class="container mx-auto pt-16 pb-8 px-8 grid grid-cols-2 lg:grid-cols-12 lg:px-0">
 		<div class="footer-logo max-w-[175px] mx-auto mb-8 col-span-2 lg:max-w-[120px] lg:mx-0">
 			<?php get_template_part( 'template-parts/main-logo' ); ?>

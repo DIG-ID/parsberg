@@ -5,6 +5,9 @@
 
 get_header();
 	do_action( 'before_main_content' );
-	//get_template_part( 'template-parts/pages/about/section', 'intro' );
+	get_template_part( 'template-parts/pages/services/intro' );
+	get_template_part( 'template-parts/pages/services/breakfast' );
+	get_template_part( 'template-parts/pages/services/gym' );
+	get_template_part( 'template-parts/pages/services/atglance' );
 	do_action( 'after_main_content' );
 get_footer();

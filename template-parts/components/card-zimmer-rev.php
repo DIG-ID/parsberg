@@ -12,7 +12,12 @@
 	<div class="content col-start-9 col-span-3 ml-8 flex flex-col justify-between h-full">
 		<div class="details">
 			<h2 class="text-3xl text-main-green font-bold mb-20"><?php the_title(); ?></h2>
-			<p class="text-2xl text-main-green font-normal mb-10">room type</p>
+			<p class="text-2xl text-main-green font-normal mb-10">
+				<?php
+				$zimmer_cat = get_the_terms( get_the_ID(), 'zimmerkategorie' );
+				echo esc_html( $zimmer_cat[0]->name );
+				?>
+			</p>
 			<p class="text-sm text-main-green font-light leading-8 tracking-wider"><?php echo get_the_excerpt(); ?></p>
 		</div>
 		<a class="block text-sm text-center font-normal tracking-widest uppercase py-4 border border-main-beige w-full transition-all duration-500 ease-in-out hover:bg-main-green hover:border-main-green hover:text-main-beige" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Zu den Zimmern', 'parsberg' ); ?></a>
