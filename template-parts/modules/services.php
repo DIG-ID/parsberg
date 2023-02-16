@@ -8,7 +8,7 @@
 			while ( have_rows( 'services_section_services_list', 'options' ) ) :
 				the_row();
 				$text = get_sub_field( 'service_name' );
-				echo '<li class="text-main-green text-sm font-light leading-8 tracking-wider">' . $text . '</li>';
+				echo '<li class="text-main-green text-sm font-light leading-8 tracking-wider flex items-center"><span class="mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="5.143" height="8.871"><g fill="none" stroke="#cba884" stroke-linecap="round" data-name="Grupo 99"><path d="m.707.707 3.728 3.728" data-name="Linha 36"/><path d="M4.436 4.435.708 8.163" data-name="Linha 37"/></g></svg></span>' . $text . '</li>';
 			endwhile;
 			echo '</ul>';
 		endif;
