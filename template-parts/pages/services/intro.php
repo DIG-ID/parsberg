@@ -1,5 +1,5 @@
 <section class="section-intro pt-80 pb-40">
-	<div class="container mx-auto grid grid-cols-1 lg:grid-cols-12">
+	<div class="lg:container mx-auto grid grid-cols-1 lg:grid-cols-12 px-8 lg:px-0">
 		<div class="title col-span-1 lg:col-span-3">
 			<h1 class="text-5xl text-main-green font-extrabold mb-12"><?php the_title(); ?></h1>
 		</div>

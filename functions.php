@@ -21,6 +21,10 @@ function parsberg_theme_setup() {
 
 	add_image_size( 'single-case-studie-featured-image', 1320, 720, array( 'center', 'center' ) );
 
+	add_image_size( 'activity-thumb', 430, 430, array( 'center', 'center' ) );
+
+	add_image_size( 'zimmer-gallery-thumb', 350, 350, array( 'center', 'center' ) );
+
 	add_image_size( 'gallery-image', 300, 300, array( 'center', 'center' ) );
 
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script' ) );
@@ -312,36 +316,6 @@ add_filter( 'post_thumbnail_html', 'parsberg_wrap_post_thumbnail_in_figure', 10,
 // Remove <p> from Contact Form 7
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
-/**
- * Add a Custom Title and Description to an Archive Page Using ACF Pro.
- */
-function parsberg_create_option_page_for_cpt() {
-	if ( function_exists( 'acf_add_options_page' ) ) :
-		$projects     = acf_add_options_page(
-			array(
-				'page_title'  => 'Projects Archive',
-				'parent_slug' => 'edit.php?post_type=projects',
-				'capability'  => 'manage_options',
-			)
-		);
-		$services     = acf_add_options_page(
-			array(
-				'page_title'  => 'Services Archive',
-				'parent_slug' => 'edit.php?post_type=services',
-				'capability'  => 'manage_options',
-			)
-		);
-		$case_studies = acf_add_options_page(
-			array(
-				'page_title'  => 'Case Studies Archive',
-				'parent_slug' => 'edit.php?post_type=case_studies',
-				'capability'  => 'manage_options',
-			)
-		);
-	endif;
-}
-
-add_action( 'acf/init', 'parsberg_create_option_page_for_cpt' );
 
 /**
  * Create a customized options page and store the data in a variable for later use
@@ -355,6 +329,24 @@ function parsberg_theme_acf_op_gc_init() {
 				'menu_slug'  => 'parsberg-theme-general-content',
 				'capability' => 'edit_posts',
 				'redirect'   => false,
+			)
+		);
+		$options_sub_page = acf_add_options_sub_page(
+			array(
+				'page_title'  => 'Zimmer Archive',
+				'menu_title'  => 'Zimmer Archive',
+				'parent_slug' => 'parsberg-theme-general-content',
+				'capability'  => 'edit_posts',
+				'post_id'     => 'zimmer_archive',
+			)
+		);
+		$options_sub_page = acf_add_options_sub_page(
+			array(
+				'page_title'  => 'Aktivitaten Archive',
+				'menu_title'  => 'Aktivitaten Archive',
+				'parent_slug' => 'parsberg-theme-general-content',
+				'capability'  => 'edit_posts',
+				'post_id'     => 'aktivitaten_archive',
 			)
 		);
 	endif;
@@ -379,9 +371,11 @@ add_filter( 'wpseo_metabox_prio', 'parsber_theme_lower_yoast_metabox_priority' )
  * Remove the "Archives:" from a custom post type archive page title.
  */
 function parsberg_theme_remove_archive_prefix( $title ) {
-	if ( is_post_type_archive( 'zimmer' ) ) {
+	if ( is_post_type_archive( 'zimmer' ) ) :
 			$title = post_type_archive_title( '', false );
-	}
+	elseif ( is_post_type_archive( 'aktivitaten' ) ) :
+		$title = post_type_archive_title( '', false );
+	endif;
 	return $title;
 }
 
