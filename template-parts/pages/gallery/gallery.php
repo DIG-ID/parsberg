@@ -1,4 +1,4 @@
-<section class="about__gallery-section pb-40">
+<section class="gallery__gallery-section pb-40">
     <div class="container px-8 lg:px-0 lg:mx-auto">
     <?php 
     $images = get_field('main_gallery');
