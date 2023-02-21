@@ -1,11 +1,11 @@
 <section class="section-at-glance lg:container mx-auto pb-28 px-8 lg:px-0">
-	<h2 class="text-2xl font-bold mb-20"><?php the_field( 'at_glance_title' ); ?></h2>
+	<h2 class="text-xl lg:text-2xl font-bold mb-10 lg:mb-20"><?php the_field( 'at_glance_title' ); ?></h2>
 	<div class="grid grid-cols-1 lg:grid-cols-2">
 		<div class="col-span-1">
-			<h3 class="flex items-center text-sm text-main-greenfont-semibold tracking-wider uppercase mb-20"><span class="block w-20 h-px bg-main-green mr-5"></span><?php the_field( 'at_glance_included_services_title' ); ?></h3>
+			<h3 class="flex items-center text-sm text-main-green font-semibold tracking-wider uppercase mb-10 lg:mb-20"><span class="block w-20 h-px bg-main-green mr-5"></span><?php the_field( 'at_glance_included_services_title' ); ?></h3>
 			<?php
 			if ( have_rows( 'at_glance_included_services_items' ) ) :
-				echo '<ul class="">';
+				echo '<ul class="mb-10 lg:mb-0">';
 				while ( have_rows( 'at_glance_included_services_items' ) ) :
 					the_row();
 					$text = get_sub_field( 'item' );
@@ -16,7 +16,7 @@
 			?>
 		</div>
 		<div class="col-span-1">
-			<h3 class="flex items-center text-sm text-main-greenfont-semibold tracking-wider uppercase mb-20"><span class="block w-20 h-px bg-main-green mr-5"></span><?php the_field( 'at_glance_in_addition_title' ); ?></h3>
+			<h3 class="flex items-center text-sm text-main-green font-semibold tracking-wider uppercase mb-10 lg:mb-20"><span class="block w-20 h-px bg-main-green mr-5"></span><?php the_field( 'at_glance_in_addition_title' ); ?></h3>
 			<?php
 			if ( have_rows( 'at_glance_in_addition_items' ) ) :
 				echo '<ul class="">';

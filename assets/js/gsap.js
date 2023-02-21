@@ -15,19 +15,17 @@ document.addEventListener("DOMContentLoaded", (e) => {
       herotl.from(".button, .site-logo", {duration: 1.5, y: 50, opacity: 0, stagger: 0.15}, "<0.5");
     }
 
+    /* menu open/close */
+    const header = document.querySelector('.main-header');
+    const toggleBtn = document.querySelector('.menu-button');
 
-    let headertl = gsap.timeline();
-    headertl.to(".main-header", {
-      scrollTrigger: {
-        trigger: '.main-header',
-        start: 'top top',
-        end: 99999,
-        scrub: true,
-        //markers: true,
-        toggleActions: "play none none reset",
-        toggleClass: {className: 'main-header--scrolled', targets: '.main-header'},
-      }
+    //let togglerTl = gsap.timeline();
+    //togglerTl.from(header, {duration: 2, minHeight: '100vh'});
+
+    toggleBtn.addEventListener( 'click', (e) => {
+      toggleBtn.classList.toggle('main-header--open');
     });
+
 
   }, false);
 });

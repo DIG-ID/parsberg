@@ -2,8 +2,10 @@
   --main-green: #2E5659
   --main-beige: #CBA884
   --bg-color: #EADCCE
+  --darker-green: #234143
   --main-font: 'Montserrat', sans-serif
   --swiper-theme-color: var(--main-green)
+
   
 html
   scroll-behavior: smooth
@@ -15,6 +17,9 @@ body
   -moz-osx-font-smoothing: grayscale
   color: var(--main-green)
   background-color: #F9F5F0
+
+body ~ .main-header--open
+  overflow: hidden
 
 .grecaptcha-badge
   visibility: hidden

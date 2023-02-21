@@ -9,7 +9,7 @@
   &--scrolled
     padding-top: 30px
     padding-bottom: 35px
-    background-color: var(--bg-color)
+    background-color: #F9F5F0
     #main-logo
       transform: translateY(-100%)
       opacity: 0
@@ -21,3 +21,20 @@
       .toggle
         span
           background-color: var(--main-green)
+  &--open
+    min-height: 100vh
+    background-color: var(--darker-green)
+
+  ~ body
+    overflow: hidden
+
+
+.navigation-mobile
+  .navbar-nav
+    .menu-item
+      text-align: center
+      .nav-link
+        display: inline-block
+        padding: 10px 0px
+        font-size: 31px
+        font-weight: 600
