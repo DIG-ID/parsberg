@@ -3,7 +3,7 @@
 		<div class="footer-logo max-w-[175px] mx-auto mb-8 col-span-2 lg:max-w-[120px] lg:mx-0">
 			<?php get_template_part( 'template-parts/main-logo' ); ?>
 		</div>
-		<div class="contacts-wrapper mb-8 flex col-span-2 lg:flex-col lg:col-start-4 lg:col-span-2"">
+		<div class="contacts-wrapper mb-8 flex col-span-2 lg:flex-col lg:col-start-4 lg:col-span-2 px-2 lg:px-0 gap-4 lg:gap-0">
 			<div class="address basis-1/2 lg:basis-0 mb-8">
 				<h4 class="text-xs font-normal tracking-widest uppercase mb-4">Adresse</h4>
 				<p>Hotel Parsberg
@@ -16,7 +16,7 @@
 				<a class="block" href="mailto:">dig@dig.id</a>
 			</div>
 		</div>
-		<div class="menu-siten mb-8 cols-span-1 lg:col-start-8 lg:col-span-1">
+		<div class="menu-siten mb-8 cols-span-2 lg:col-start-8 lg:col-span-2 px-2 lg:px-0">
 			<h4 class="text-xs font-normal tracking-widest uppercase mb-4">Seiten</h4>
 			<?php
 			wp_nav_menu(
@@ -28,7 +28,7 @@
 			);
 			?>
 		</div>
-		<div class="menu-info mb-8 col-span-1 lg:col-start-11 lg:col-span-2">
+		<div class="menu-info mb-8 col-span-1 lg:col-start-11 lg:col-span-2 px-2 lg:px-0">
 			<h4 class="text-xs font-normal tracking-widest uppercase mb-4">RECHTLICHE HINWEISE</h4>
 			<?php
 			wp_nav_menu(
