@@ -1,4 +1,4 @@
-<section class="section-at-glance lg:container mx-auto pb-28 px-8 lg:px-0">
+<section class="section-at-glance lg:container mx-auto pb-28 px-8 xl:px-0">
 	<h2 class="text-xl lg:text-2xl font-bold mb-10 lg:mb-20"><?php the_field( 'at_glance_title' ); ?></h2>
 	<div class="grid grid-cols-1 lg:grid-cols-2">
 		<div class="col-span-1">
