@@ -8,6 +8,7 @@ function parsberg_theme_setup() {
 		array(
 			'main'   => __( 'Main Menu', 'parsberg' ),
 			'footer' => __( 'Footer Menu', 'parsberg' ),
+			'footer terms' => __( 'Footer Terms Menu', 'parsberg' ),
 		)
 	);
 

@@ -33,7 +33,7 @@
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location' => 'footer',
+					'theme_location' => 'footer terms',
 					'menu_class'     => 'footer-nav',
 					'fallback_cb'    => false,
 				),
