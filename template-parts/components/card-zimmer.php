@@ -1,5 +1,5 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'grid grid-cols-1 lg:grid-cols-12 mb-20 lg:mb-24 lg:min-h-[560px] lg:ml-8 lg:gap-8' ); ?>>
-	<div class="content col-start-2 col-span-3 lg:flex lg:flex-col lg:justify-between h-full px-8 xl:px-0 order-2 lg:order-1">
+	<div class="content col-start-2 col-span-3 lg:flex lg:flex-col lg:justify-between h-full px-8 lg:px-0 order-2 lg:order-1">
 		<div class="details">
 			<h2 class="text-3xl text-main-green font-bold mb-10 lg:mb-20"><?php the_title(); ?></h2>
 			<p class="text-2xl text-main-green font-normal mb-5 lg:mb-10">
