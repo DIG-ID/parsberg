@@ -9,7 +9,7 @@
 		<?php
 	endif;
 	?>
-	<div class="content col-span-1 lg:col-start-9 lg:col-span-3 lg:ml-8 lg:flex lg:flex-col lg:justify-between lg:h-full px-8 lg:px-0">
+	<div class="content col-span-1 lg:col-start-9 lg:col-span-3 lg:ml-8 lg:flex lg:flex-col lg:justify-between lg:h-full px-8 xl:px-0">
 		<div class="details">
 			<h2 class="text-3xl text-main-green font-bold mb-10 lg:mb-20"><?php the_title(); ?></h2>
 			<p class="text-2xl text-main-green font-normal mb-5 lg:mb-10">

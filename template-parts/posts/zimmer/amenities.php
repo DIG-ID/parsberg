@@ -1,4 +1,4 @@
-<section class="section-amenities py-14 lg:py-28 bg-darker-green text-main-beige px-8 lg:px-0">
+<section class="section-amenities py-14 lg:py-28 bg-darker-green text-main-beige px-8 xl:px-0">
 	<div class="lg:container mx-auto flex flex-col lg:flex-row">
 		<div class="equipments w-full lg:w-1/2 lg:px-20">
 			<h3 class="text-sm font-semibold tracking-wider uppercase mb-6 lg:mb-8"><?php esc_html_e( 'Ausstattung', 'parsberg' ); ?></h3>

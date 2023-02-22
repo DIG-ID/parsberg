@@ -1,4 +1,4 @@
-<section class="section-connection grid grid-cols-1 lg:grid-cols-12 pb-20 lg:pb-40 px-8 lg:px-0">
+<section class="section-connection grid grid-cols-1 lg:grid-cols-12 pb-20 lg:pb-40 px-8 xl:px-0">
 	<div class="col-span-1 lg:col-span-5 xl:col-start-2 xl:col-span-3 lg:ml-7 lg:mr-20">
 		<p class="flex items-center text-sm text-main-green font-semibold tracking-wider uppercase mb-8"><span class="block w-20 h-px bg-main-green mr-5"></span><?php the_field( 'activitities_connection_small_title', 'aktivitaten_archive' ); ?></p>
 	</div>

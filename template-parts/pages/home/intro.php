@@ -1,6 +1,6 @@
 <section class="section-intro pt-24">
 	<div class="container grid grid-cols-1 pb-24 px-8 lg:px-0 lg:grid-cols-12 lg:mx-auto">
-		<div class="col-start-1 col-span-12 md:col-span-2">
+		<div class="col-start-1 col-span-12 md:col-span-2 lg:col-span-3 px-8 xl:px-0">
 			<h2 class="section-title text-3xl font-bold mb-10 lg:mb-0"><?php the_field( 'intro_section_title' ); ?></h2>
 		</div>
 		<div class="section-description col-span-12 lg:col-start-4 lg:col-span-5">
