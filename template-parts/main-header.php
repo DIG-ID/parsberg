@@ -26,7 +26,7 @@
 					$btn_title  = $btn['title'];
 					$btn_target = $btn['target'] ? $btn['target'] : '_self';
 					?>
-						<a class="book-button transition-colors hidden lg:inline-block bg-main-green text-main-beige text-sm font-normal tracking-widest uppercase no-underline py-3.5 px-5 z-50" href="<?php echo esc_url( $btn_url ); ?>" target="<?php echo esc_attr( $btn_target ); ?>"><?php echo esc_html( $btn_title ); ?></a>
+						<a class="book-button transition-colors duration-700 hidden lg:inline-block bg-main-green text-main-beige text-sm font-normal tracking-widest uppercase no-underline py-3.5 px-5 z-50" href="<?php echo esc_url( $btn_url ); ?>" target="<?php echo esc_attr( $btn_target ); ?>"><?php echo esc_html( $btn_title ); ?></a>
 					<?php
 				endif;
 				?>
