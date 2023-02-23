@@ -1,6 +1,6 @@
 .main-header
-  min-height: auto
-  transition: all .4s ease-in-out
+  min-height: 110px
+  transition: all .5s ease-in-out
   #site-logo-wrapper
     .site-logo-content
       left: 50%
@@ -40,10 +40,9 @@
           opacity: 1
 
 body.menu-open
-  overflow: hidden
   .main-header
-    &--scrolled
-      min-height: 110px
+    min-height: 100vh
+    background-color: var(--main-green)
     #site-logo-wrapper
       .site-logo-content
         transform: translate(-50%, 0px) rotate3d(1, 0, 0,0deg)
@@ -59,9 +58,11 @@ body.menu-open
       transform: translateY(0%)
       opacity: 1
 
+
 .navigation-mobile
   transform: translateY(-100%)
   opacity: 0
+  transition: all .5s ease-in-out
   .navbar-nav
     .menu-item
       text-align: center
