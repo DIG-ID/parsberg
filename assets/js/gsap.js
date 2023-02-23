@@ -51,6 +51,13 @@ document.addEventListener("DOMContentLoaded", () => {
     togglerTl.paused(true);
 
     toggleBtn.addEventListener( 'click', (e) => {
+      const bookButtons = document.querySelectorAll('.book-button'); // Select all buttons with the class "book-button"
+      bookButtons.forEach(button => {
+        button.classList.toggle('bg-main-green');
+        button.classList.toggle('text-main-beige');
+        button.classList.toggle('bg-main-beige');
+        button.classList.toggle('text-main-green');
+      });
       document.body.classList.toggle('menu-open');
       if (togglerTl.paused()) {
         togglerTl.play();
