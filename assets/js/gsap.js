@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* menu open/close */
     const toggleBtn = document.querySelector('.menu-button');
+
     let togglerTl = gsap.timeline({
       defaults: {
         duration: 0.5
@@ -46,8 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     togglerTl.to('.main-header', { backgroundColor: 'var(--main-green)', minHeight: '100vh'});
-    togglerTl.to('.navigation-mobile', { y: '0%', opacity: 1}, '<');
-    togglerTl.from('.navigation-mobile .nav-link', { x: '-100px', opacity: 0, stagger: 0.15 },'<0.30');
+    togglerTl.to('.navigation-mobile', { y: '0%'}, '<');
+    togglerTl.to('.navigation-mobile', { opacity: 1}, '<0.25');
+    togglerTl.from('.navigation-mobile .nav-link', { x: '-50px', opacity: 0, stagger: 0.25 }, '<0.25');
     togglerTl.paused(true);
 
     toggleBtn.addEventListener( 'click', (e) => {
@@ -67,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         togglerTl.reverse();
       }
     });
+
 
 
 

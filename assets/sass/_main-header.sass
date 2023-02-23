@@ -1,6 +1,12 @@
 .main-header
   min-height: 110px
+  background-color: #F9F5F0
   transition: all .5s ease-in-out
+  & .menu-button
+    color: var(--main-green)
+    .toggle
+      span
+        background-color: var(--main-green)
   #site-logo-wrapper
     .site-logo-content
       left: 50%
@@ -24,6 +30,7 @@
       
 .page-template-page-home
   .main-header
+    background-color: transparent
     #site-logo-wrapper
       .site-logo-content
         transform: translate(-50%, 0px) rotate3d(0, 0, 0, 0deg)
@@ -31,7 +38,18 @@
           opacity: 1
         #main-symbol
           opacity: 0
+    & .menu-button
+      color: var(--main-beige)
+      .toggle
+        span
+          background-color: var(--main-beige)
   .main-header--scrolled
+    background-color: #F9F5F0
+    & .menu-button
+      color: var(--main-green)
+      .toggle
+        span
+          background-color: var(--main-green)
     #site-logo-wrapper
       .site-logo-content
         transform: translate(-50%, 0px) rotate3d(1, 0, 0, 180deg)
@@ -44,12 +62,6 @@
 .main-header--scrolled
   min-height: 110px
   padding-top: 30px
-  background-color: #F9F5F0
-  & .menu-button
-    color: var(--main-green)
-    .toggle
-      span
-        background-color: var(--main-green)
   #site-logo-wrapper
     .site-logo-content
       transform: translate(-50%, 0px) rotate3d(1, 0, 0, 180deg)

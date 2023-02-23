@@ -10,7 +10,7 @@
 					</span>
 					<span class="hidden lg:inline"><?php esc_html_e( 'Menu', 'parsberg' ); ?></span>
 				</button>
-				<a id="site-logo-wrapper" class="site-logo absolute top-7 left-1/2 -translate-x-1/2 z-50 flex justify-center " href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>">
+				<a id="site-logo-wrapper" class="site-logo absolute top-7 left-1/2 -translate-x-1/2 z-50 flex justify-center" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>">
 					<div class="site-logo-content absolute w-[200px] h-[200px] flex justify-center">
 						<?php get_template_part( 'template-parts/main-logo' ); ?>
 						<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 150 235.9" id="main-symbol" class="section-hero-symbol fill-main-green w-[38px] mx-auto h-auto" width="150" height="235.9" x="0" y="0" version="1.1">
