@@ -2,7 +2,7 @@
 	<nav class="navbar fixed-top navbar-expand-lg" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'parsberg' ); ?>">
 		<div class="container mx-auto px-8">
 			<div class="columns-3 flex justify-between">
-				<button class="menu-button text-main-beige text-sm uppercase tracking-widest flex items-center hover:text-main-green focus:outline-none transition-all duration-500 ease-in-out z-50" type="button">
+				<button class="menu-button text-main-beige text-sm uppercase tracking-widest flex items-center focus:outline-none transition-all duration-500 ease-in-out z-50" type="button">
 					<span class="toggle w-7 h-7 mr-5 flex flex-col justify-around items-center box-border">
 						<span class="bg-main-beige w-9/12 h-0.5 block transition-all duration-500 ease-in-out"></span>
 						<span class="bg-main-beige w-full h-0.5 block transition-all duration-500 ease-in-out"></span>
@@ -26,7 +26,7 @@
 					$btn_title  = $btn['title'];
 					$btn_target = $btn['target'] ? $btn['target'] : '_self';
 					?>
-						<a class="book-button hidden lg:inline-block bg-main-green text-main-beige text-sm font-normal tracking-widest uppercase no-underline py-3.5 px-5 z-50" href="<?php echo esc_url( $btn_url ); ?>" target="<?php echo esc_attr( $btn_target ); ?>"><?php echo esc_html( $btn_title ); ?></a>
+						<a class="book-button transition-colors hidden lg:inline-block bg-main-green text-main-beige text-sm font-normal tracking-widest uppercase no-underline py-3.5 px-5 z-50" href="<?php echo esc_url( $btn_url ); ?>" target="<?php echo esc_attr( $btn_target ); ?>"><?php echo esc_html( $btn_title ); ?></a>
 					<?php
 				endif;
 				?>
