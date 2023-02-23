@@ -6,17 +6,17 @@
 		<div class="contacts-wrapper mb-8 flex-col col-span-2 lg:flex-col lg:col-start-4 lg:col-span-2 px-2 lg:px-0 gap-4 lg:gap-0">
 			<div class="address basis-0 lg:basis-0 mb-8">
 				<h4 class="text-xs font-normal tracking-widest uppercase mb-4">Adresse</h4>
-				<p>Hotel Parsberg
+				<p class="leading-6">Hotel Parsberg
 					Augsburger Strasse 1
 					D-82178 Puchheim</p>
 			</div>
 			<div class="contacts basis-0 lg:basis-0">
 				<h4 class="text-xs font-normal tracking-widest uppercase mb-4">Kontakt</h4>
-				<a class="block" href="tel:">132 465 789</a>
-				<a class="block" href="mailto:">dig@dig.id</a>
+				<a class="block leading-6" href="tel:">T: 089 / 80 09 90 - 0</a>
+				<a class="block leading-6" href="mailto:">E: post@hotel-parsberg.de</a>
 			</div>
 		</div>
-		<div class="menu-siten mb-8 col-span-2 lg:col-start-8 lg:col-span-2 px-2 lg:px-0">
+		<div class="menu-siten mb-8 col-span-2 lg:col-start-8 lg:col-span-2 px-2 lg:px-0 leading-6">
 			<h4 class="text-xs font-normal tracking-widest uppercase mb-4">Seiten</h4>
 			<?php
 			wp_nav_menu(
@@ -28,7 +28,7 @@
 			);
 			?>
 		</div>
-		<div class="menu-info mb-8 col-span-2 lg:col-start-11 lg:col-span-2 px-2 lg:px-0">
+		<div class="menu-info mb-8 col-span-2 lg:col-start-11 lg:col-span-2 px-2 lg:px-0 leading-6">
 			<h4 class="text-xs font-normal tracking-widest uppercase mb-4">RECHTLICHE HINWEISE</h4>
 			<?php
 			wp_nav_menu(
