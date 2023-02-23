@@ -19,9 +19,17 @@
 					</div>
 
 				</a>
-				<a href="" class="book-button hidden lg:inline-block bg-main-green text-main-beige text-sm font-normal tracking-widest uppercase no-underline py-3.5 px-5 z-50" type="button">
-					<?php esc_html_e( 'Jetzt Buchen', 'parsberg' ); ?>
-				</a>
+				<?php
+				$btn = get_field( 'direct_booking_section_button', 'option' );
+				if ( $btn ) :
+					$btn_url    = $btn['url'];
+					$btn_title  = $btn['title'];
+					$btn_target = $btn['target'] ? $btn['target'] : '_self';
+					?>
+						<a class="book-button hidden lg:inline-block bg-main-green text-main-beige text-sm font-normal tracking-widest uppercase no-underline py-3.5 px-5 z-50" href="<?php echo esc_url( $btn_url ); ?>" target="<?php echo esc_attr( $btn_target ); ?>"><?php echo esc_html( $btn_title ); ?></a>
+					<?php
+				endif;
+				?>
 			</div>
 		</div>
 		<div class="navigation-mobile absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center text-main-beige z-40">
