@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let togglerTl = gsap.timeline();
     //togglerTl.to('.main-header', {duration: 0.5, backgroundColor: 'var(--main-green)', minHeight: '100vh'});
-    //togglerTl.to('.navigation-mobile', {duration: 0.5, y: '0%', opacity: 1});
+    togglerTl.to('.navigation-mobile', {duration: 0.3, y: '0%', opacity: 1}, '<0.25');
     togglerTl.from('.navigation-mobile .nav-link', {duration: 0.6, delay: 0.5, x: '-100px', opacity: 0, stagger: 0.15 });
     togglerTl.paused(true);
 
@@ -55,8 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (togglerTl.paused()) {
         togglerTl.play();
       } else if (togglerTl.reversed()) {
-        togglerTl.play();
-        togglerTl.timeScale(1);
+        togglerTl.restart();
       } else {
         togglerTl.reverse();
       }

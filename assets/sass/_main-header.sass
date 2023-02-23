@@ -7,30 +7,31 @@
       transform-style: preserve-3d
       transform-origin: center center
       transition: all .4s ease-in-out
-      transform: translate(-50%, 0px) rotate3d(0, 0, 0, 0deg)
+      transform: translate(-50%, 0px) rotate3d(1, 0, 0, 180deg)
       #main-logo, #main-symbol
         backface-visibility: hidden
         transition: all .4s ease-in-out
         height: auto
       #main-logo
-        opacity: 1
+        opacity: 0
       #main-symbol
         transform: rotateX(180deg)
         position: absolute
         bottom: 0
         left: auto
         right: auto
-        opacity: 0
+        opacity: 1
       
-  &--scrolled
-    min-height: 110px
-    padding-top: 30px
-    background-color: #F9F5F0
-    & .menu-button
-      color: var(--main-green)
-      .toggle
-        span
-          background-color: var(--main-green)
+.page-template-page-home
+  .main-header
+    #site-logo-wrapper
+      .site-logo-content
+        transform: translate(-50%, 0px) rotate3d(0, 0, 0, 0deg)
+        #main-logo
+          opacity: 1
+        #main-symbol
+          opacity: 0
+  .main-header--scrolled
     #site-logo-wrapper
       .site-logo-content
         transform: translate(-50%, 0px) rotate3d(1, 0, 0, 180deg)
@@ -38,6 +39,25 @@
           opacity: 0
         #main-symbol
           opacity: 1
+
+
+.main-header--scrolled
+  min-height: 110px
+  padding-top: 30px
+  background-color: #F9F5F0
+  & .menu-button
+    color: var(--main-green)
+    .toggle
+      span
+        background-color: var(--main-green)
+  #site-logo-wrapper
+    .site-logo-content
+      transform: translate(-50%, 0px) rotate3d(1, 0, 0, 180deg)
+      #main-logo
+        opacity: 0
+      #main-symbol
+        opacity: 1
+
 
 body.menu-open
   .main-header
@@ -67,6 +87,7 @@ body.menu-open
     .menu-item
       text-align: center
       .nav-link
+        display: block
         padding: 10px 0px
         font-size: 31px
         font-weight: 600
