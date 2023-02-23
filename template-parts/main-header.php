@@ -8,7 +8,7 @@
 						<span class="bg-main-beige w-full h-0.5 block transition-all duration-500 ease-in-out"></span>
 						<span class="bg-main-beige w-9/12 h-0.5 block transition-all duration-500 ease-in-out"></span>
 					</span>
-					<?php esc_html_e( 'Menu', 'parsberg' ); ?>
+					<span class="hidden lg:inline"><?php esc_html_e( 'Menu', 'parsberg' ); ?></span>
 				</button>
 				<a id="site-logo-wrapper" class="site-logo absolute top-7 left-1/2 -translate-x-1/2 z-50 flex justify-center " href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>">
 					<div class="site-logo-content absolute w-[200px] h-[200px] flex justify-center">

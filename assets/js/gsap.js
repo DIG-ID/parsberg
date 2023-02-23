@@ -35,23 +35,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* menu open/close */
     const toggleBtn = document.querySelector('.menu-button');
-
-    let togglerTl = gsap.timeline();
-    //togglerTl.to('.main-header', {duration: 0.5, backgroundColor: 'var(--main-green)', minHeight: '100vh'});
-    togglerTl.to('.navigation-mobile', {duration: 0.3, y: '0%', opacity: 1}, '<0.25');
-    togglerTl.from('.navigation-mobile .nav-link', {duration: 0.6, delay: 0.5, x: '-100px', opacity: 0, stagger: 0.15 });
+    let togglerTl = gsap.timeline({
+      defaults: {
+        duration: 0.5
+      },
+      onReverseComplete: () => {
+        gsap.set( ".main-header", {
+          clearProps: "backgroundColor"
+        } );
+      }
+    });
+    togglerTl.to('.main-header', { backgroundColor: 'var(--main-green)', minHeight: '100vh'});
+    togglerTl.to('.navigation-mobile', { y: '0%', opacity: 1}, '<');
+    togglerTl.from('.navigation-mobile .nav-link', { x: '-100px', opacity: 0, stagger: 0.15 },'<0.30');
     togglerTl.paused(true);
 
     toggleBtn.addEventListener( 'click', (e) => {
-      //toggleBtn.classList.toggle('main-header--open');
       document.body.classList.toggle('menu-open');
-
-      /*if (document.body.classList.contains("menu-open")) {
-        gsap.from('.navigation-mobile .nav-link', {duration: 1, delay: 0.5, y: '-200px', opacity: 0, stagger: 0.25 });
-      } else {
-        gsap.to('.navigation-mobile .nav-link', {duration: 0.4, x: '50px', opacity: 0, stagger: 0.15 });
-      }*/
-
       if (togglerTl.paused()) {
         togglerTl.play();
       } else if (togglerTl.reversed()) {
