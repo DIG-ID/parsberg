@@ -1,4 +1,4 @@
-<section class="section-about grid grid-cols-1 px-8 lg:px-0 lg:grid-cols-12 mb-24 lg:mr-7">
+<section class="section-about grid grid-cols-1 px-8 lg:px-0 lg:grid-cols-12 mb-24 lg:mr-14">
 	<?php
 	$image = get_field( 'about_us_section_image' );
 	if ( ! empty( $image ) ) :
