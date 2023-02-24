@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid grid-cols-1 lg:grid-cols-12 mb-20 lg:mb-24 lg:min-h-[560px] lg:mr-8 lg:gap-8' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'grid grid-cols-1 lg:grid-cols-12 mb-20 lg:mb-24 lg:min-h-[560px] lg:mr-14 lg:gap-8' ); ?>>
 <?php
 	if ( has_post_thumbnail() ) :
 		?>
@@ -9,7 +9,7 @@
 		<?php
 	endif;
 	?>
-	<div class="content col-span-1 lg:col-start-9 lg:col-span-3 lg:ml-8 lg:flex lg:flex-col lg:justify-between lg:h-full px-8 lg:px-0">
+	<div class="content col-span-1 lg:col-start-9 lg:col-span-3 lg:ml-14 lg:flex lg:flex-col lg:justify-between lg:h-full px-8 lg:px-0">
 		<div class="details">
 			<h2 class="text-3xl text-main-green font-bold mb-10 lg:mb-20"><?php the_title(); ?></h2>
 			<p class="text-2xl text-main-green font-normal mb-5 lg:mb-10">

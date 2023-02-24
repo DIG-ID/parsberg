@@ -1,5 +1,5 @@
 <section class="gallery__gallery-section pb-40">
-    <div class="container px-8 xl:px-0 lg:mx-auto">
+    <div class="container px-8 lg:mx-auto">
     <?php 
     $images = get_field('main_gallery');
     $size = 'gallery-image'; // (thumbnail, medium, large, full or custom size)

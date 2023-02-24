@@ -1,5 +1,5 @@
 <section class="section-services grid grid-col-1 lg:grid-cols-12 pt-20 lg:pt-36 pb-20 px-8 lg:px-0">
-	<div class="services-content col-span-1 lg:col-start-2 lg:col-span-5 lg:ml-7 order-2 lg:order-1">
+	<div class="services-content col-span-1 lg:col-start-2 lg:col-span-5 lg:ml-12 order-2 lg:order-1">
 		<h2 class="text-3xl font-bold text-main-green mb-12"><?php the_field( 'services_section_title', 'option' ); ?></h2>
 		<p class="text-main-green text-sm font-light leading-8 tracking-wider mb-14"><?php the_field( 'services_section_description' ); ?></p>
 		<?php
