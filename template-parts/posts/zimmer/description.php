@@ -7,7 +7,7 @@
 			</p>
 		</div>
 		<div class="description col-span-1 lg:col-span-5">
-			<p class="text-main-green text-sm font-light leading-8 tracking-wider lg:mr-8 mb-8">
+			<p class="text-main-green text-sm leading-8 tracking-wider lg:mr-8 mb-8">
 				<?php echo esc_html( wp_strip_all_tags( get_the_content() ) ); ?>
 			</p>
 		</div>

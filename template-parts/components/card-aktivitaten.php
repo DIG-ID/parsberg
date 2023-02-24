@@ -30,13 +30,13 @@
 		<h3 class="text-sm text-main-green font-semibold uppercase mb-5"><?php the_title(); ?></h3>
 		<div class="lg:min-h-[60px] mb-3">
 			<?php if ( get_field( 'aktivitaten_distance' ) ) : ?>
-				<p class="text-sm text-main-green font-light mb-3"><span class="font-semibold"><?php esc_html_e( 'Distanz: ', 'parsberg' ); ?></span><?php the_field( 'aktivitaten_distance' ); ?></p>
+				<p class="text-sm text-main-green mb-3"><span class="font-semibold"><?php esc_html_e( 'Distanz: ', 'parsberg' ); ?></span><?php the_field( 'aktivitaten_distance' ); ?></p>
 			<?php endif; ?>
 			<?php if ( get_field( 'aktivitaten_travel_time_approx' ) ) : ?>
-				<p class="text-sm text-main-green font-light"><span class="font-semibold"><?php esc_html_e( 'Fahrzeit ca.: ', 'parsberg' ); ?></span><?php the_field( 'aktivitaten_travel_time_approx' ); ?></p>
+				<p class="text-sm text-main-green"><span class="font-semibold"><?php esc_html_e( 'Fahrzeit ca.: ', 'parsberg' ); ?></span><?php the_field( 'aktivitaten_travel_time_approx' ); ?></p>
 			<?php endif; ?>
 		</div>
-		<p class="text-sm text-main-green font-light leading-8 tracking-wider mb-7 lg:min-h-[420px]"><?php echo esc_html( wp_strip_all_tags( get_the_content() ) ); ?></p>
+		<p class="text-sm text-main-green leading-8 tracking-wider mb-7 lg:min-h-[420px]"><?php echo esc_html( wp_strip_all_tags( get_the_content() ) ); ?></p>
 		<?php
 		if ( $btn ) :
 			$btn_url    = $btn['url'];

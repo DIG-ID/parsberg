@@ -6,7 +6,7 @@
 		<h2 class="text-xl lg:text-2xl font-bold mb-8"><?php the_field( 'activitities_environment_title', 'aktivitaten_archive' ); ?></h2>
 	</div>
 	<div class="col-span-1 lg:col-span-5 xl:col-start-2 xl:col-span-3 lg:ml-7 lg:mr-20">
-		<p class="text-main-green text-sm font-light leading-8 tracking-wider mb-8 lg:mb-0"><?php the_field( 'activitities_environment_description', 'aktivitaten_archive' ); ?></p>	
+		<p class="text-main-green text-sm leading-8 tracking-wider mb-8 lg:mb-0"><?php the_field( 'activitities_environment_description', 'aktivitaten_archive' ); ?></p>	
 	</div>
 	<div class="col-span-1 lg:col-span-7 xl:col-span-8">
 		<?php

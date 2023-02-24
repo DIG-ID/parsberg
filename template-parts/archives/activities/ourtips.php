@@ -6,7 +6,7 @@
 		<h2 class="text-xl lg:text-2xl font-bold mb-8"><?php the_field( 'activitities_our_tips_title', 'aktivitaten_archive' ); ?></h2>
 	</div>
 	<div class="col-span-1 mb-14 lg:col-span-5 xl:col-span-3">
-		<p class="text-main-green text-sm font-light leading-8 tracking-wider"><?php the_field( 'activitities_our_tips_description', 'aktivitaten_archive' ); ?></p>
+		<p class="text-main-green text-sm leading-8 tracking-wider"><?php the_field( 'activitities_our_tips_description', 'aktivitaten_archive' ); ?></p>
 	</div>
 	<div class="col-span-1 lg:col-span-7 xl:col-span-8 xl:ml-16">
 		<?php

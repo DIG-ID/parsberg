@@ -4,7 +4,7 @@
 			<h1 class="text-2xl lg:text-5xl text-main-green font-extrabold mb-5 lg:mb-12"><?php the_field( 'activitities_intro_title', 'aktivitaten_archive' ); ?></h1>
 		</div>
 		<div class="description col-span-1 lg:col-start-8 lg:col-span-4">
-			<p class="text-xs lg:text-sm text-main-green font-light leading-8 lg:leading-8 tracking-wider">
+			<p class="text-xs lg:text-sm text-main-green leading-8 lg:leading-8 tracking-wider">
 				<?php the_field( 'activitities_intro_description', 'aktivitaten_archive' ); ?>
 			</p>
 		</div>

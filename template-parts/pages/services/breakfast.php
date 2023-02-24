@@ -6,7 +6,7 @@
 		<h2 class="text-xl lg:text-2xl font-bold"><?php the_field( 'breakfast_title' ); ?></h2>
 	</div>
 	<div class="col-span-2 mb-10 lg:mb-0 lg:col-start-2 lg:col-span-3 lg:ml-7 lg:mr-20 order-2 lg:order-1">
-		<p class="text-main-green text-sm font-light leading-8 tracking-wider"><?php the_field( 'breakfast_description' ); ?></p>
+		<p class="text-main-green text-sm leading-8 tracking-wider"><?php the_field( 'breakfast_description' ); ?></p>
 	</div>
 	<div class="col-span-2 lg:col-span-8 order-1 lg:order-2 mb-10 lg:mb-0">
 		<?php
@@ -18,10 +18,10 @@
 	</div>
 	<div class="col-span-1 lg:col-start-5 lg:col-span-2 lg:mt-20 order-3">
 		<h3 class="text-main-green text-sm font-semibold tracking-wider mb-10"><?php the_field( 'breakfast_schedule_title' ); ?></h3>
-		<p class="text-main-green text-sm font-light leading-8 tracking-wider"><?php the_field( 'breakfast_schedule_content' ); ?></p>
+		<p class="text-main-green text-sm leading-8 tracking-wider"><?php the_field( 'breakfast_schedule_content' ); ?></p>
 	</div>
 	<div class="col-span-1 lg:col-start-7 lg:col-span-3 lg:mt-20 order-4">
 		<h3 class="text-main-green text-sm font-semibold tracking-wider mb-10"><?php the_field( 'breakfast_price_title' ); ?></h3>
-		<p class="text-main-green text-sm font-light leading-8 tracking-wider"><?php the_field( 'breakfast_price_content' ); ?></p>
+		<p class="text-main-green text-sm leading-8 tracking-wider"><?php the_field( 'breakfast_price_content' ); ?></p>
 	</div>
 </section>

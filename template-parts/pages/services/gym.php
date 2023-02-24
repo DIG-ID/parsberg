@@ -6,7 +6,7 @@
 		<h2 class="text-xl lg:text-2xl font-bold mb-8"><?php the_field( 'gym_title' ); ?></h2>
 	</div>
 	<div class="col-span-1 lg:col-start-2 lg:col-span-3 lg:ml-7 lg:mr-20 order-2 lg:order-1">
-		<p class="text-main-green text-sm font-light leading-8 tracking-wider"><?php the_field( 'gym_description' ); ?></p>
+		<p class="text-main-green text-sm leading-8 tracking-wider"><?php the_field( 'gym_description' ); ?></p>
 	</div>
 	<div class="cols-span-1 lg:col-span-8 mb-8 lg:mb-0 order-1 lg:order-2">
 		<?php
