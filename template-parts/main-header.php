@@ -2,13 +2,13 @@
 	<nav class="navbar fixed-top navbar-expand-lg" role="navigation" aria-label="<?php esc_attr_e( 'Main navigation', 'parsberg' ); ?>">
 		<div class="container mx-auto px-8">
 			<div class="columns-3 flex justify-between">
-				<button class="menu-button text-main-beige text-sm uppercase tracking-widest flex items-center focus:outline-none transition-all duration-500 ease-in-out z-50" type="button">
-					<span class="toggle w-7 h-7 mr-5 flex flex-col justify-around items-center box-border">
-						<span class="bg-main-beige w-9/12 h-0.5 block transition-all duration-500 ease-in-out"></span>
-						<span class="bg-main-beige w-full h-0.5 block transition-all duration-500 ease-in-out"></span>
-						<span class="bg-main-beige w-9/12 h-0.5 block transition-all duration-500 ease-in-out"></span>
-					</span>
-					<span class="hidden lg:inline"><?php esc_html_e( 'Menu', 'parsberg' ); ?></span>
+				<button class="menu-button text-main-beige text-sm uppercase tracking-widest flex items-center focus:outline-none active:outline-none transition-all duration-500 ease-in-out z-50" type="button">
+					<div class="toggle">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</div>
+					<span class="hidden ml-6 lg:inline"><?php esc_html_e( 'Menu', 'parsberg' ); ?></span>
 				</button>
 				<a id="site-logo-wrapper" class="site-logo absolute top-7 left-1/2 -translate-x-1/2 z-50 flex justify-center" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>">
 					<div class="site-logo-content absolute w-[200px] h-[200px] flex justify-center">

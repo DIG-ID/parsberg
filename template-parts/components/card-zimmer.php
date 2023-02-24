@@ -3,10 +3,7 @@
 		<div class="details">
 			<h2 class="text-3xl text-main-green font-bold mb-10 lg:mb-20"><?php the_title(); ?></h2>
 			<p class="text-2xl text-main-green font-normal mb-5 lg:mb-10">
-				<?php
-				$zimmer_cat = get_the_terms( get_the_ID(), 'zimmerkategorie' );
-				echo esc_html( $zimmer_cat[0]->name );
-				?>
+				<?php the_field( 'subtitle' ); ?>
 			</p>
 			<p class="text-sm text-main-green font-light leading-8 tracking-wider mb-10 lg:mb-0"><?php echo get_the_excerpt(); ?></p>
 		</div>

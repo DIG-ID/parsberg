@@ -3,10 +3,7 @@
 		<div class="title col-span-1 lg:col-span-4">
 			<h1 class="text-2xl lg:text-3xl font-bold lg:font-semibold mb-8 lg:mb-5 w-1/2 lg:w-full"><?php echo esc_html( wp_strip_all_tags( get_the_title() ) ); ?></h1>
 			<p class="text-2xl text-main-green font-normal mb-8 lg:mb-10">
-				<?php
-				$zimmer_cat = get_the_terms( get_the_ID(), 'zimmerkategorie' );
-				echo esc_html( $zimmer_cat[0]->name );
-				?>
+				<?php the_field( 'subtitle' ); ?>
 			</p>
 		</div>
 		<div class="description col-span-1 lg:col-span-5">

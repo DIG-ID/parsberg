@@ -15,13 +15,26 @@ document.addEventListener("DOMContentLoaded", () => {
       herotl.from(".section-hero-title", {duration: 2, y: 50, opacity: 0}, "<0.5");
       herotl.from(".button, #site-logo-wrapper", {duration: 1.5, y: 50, opacity: 0, stagger: 0.15}, "<0.5");
 
+      // Intro Section
+      let introtl = gsap.timeline({ defaults: { duration: 1 } });
+      introtl.from('.section-intro .section-title', { x: '-50px', opacity: 0 });
+      introtl.from('.section-intro .section-description', { x: '50px', opacity: 0 }, '<');
+      introtl.from('.section-intro .section-hero-symbol', { opacity: 0 }, '<');
+      let introSt = ScrollTrigger.create({
+        trigger: '.section-intro',
+        start: 'top 60%',
+        end: '20% 60%',
+        scrub: 1,
+        //markers: true,
+        toggleActions: 'play pause reverse reset',
+        animation: introtl
+      });
+
       // Location Section
       let locationtl = gsap.timeline({ defaults: { duration: 1 } });
-
       locationtl.from('.section-location svg', { y: '-50px', opacity: 0 });
       locationtl.from('.section-location span', { opacity: 0 }, '<');
       locationtl.from('.section-location p', { y: '-50px', opacity: 0 });
-
       let locationSt = ScrollTrigger.create({
         trigger: '.section-location',
         start: '-50px 40%',
