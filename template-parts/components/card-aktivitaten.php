@@ -33,6 +33,16 @@
 		</div>
 		<p class="text-sm text-main-green font-light leading-8 tracking-wider mb-7 lg:min-h-[420px]"><?php echo esc_html( wp_strip_all_tags( get_the_content() ) ); ?></p>
 
-		<a class="inline-block text-sm font-semibold tracking-wider uppercase transition-all duration-500 ease-in-out flex items-center hover:text-main-beige" href="<?php echo esc_url( get_field( 'aktivitaten_button_url' ) ); ?>"><?php esc_html_e( 'Mehr erfahren', 'parsberg' ); ?><svg xmlns="http://www.w3.org/2000/svg" width="5.143" height="8.871" class="ml-2"><g fill="none" stroke="#cba884" stroke-linecap="round" data-name="Grupo 99"><path d="m.707.707 3.728 3.728" data-name="Linha 36"/><path d="M4.436 4.435.708 8.163" data-name="Linha 37"/></g></svg></a>
+		<?php
+		$btn = get_field( 'aktivitaten_button' );
+		if ( $btn ) :
+			$btn_url    = $btn['url'];
+			$btn_title  = $btn['title'];
+			$btn_target = $btn['target'] ? $btn['target'] : '_self';
+			?>
+			<a class="text-sm font-semibold tracking-wider uppercase transition-all duration-500 ease-in-out flex items-center hover:text-main-beige" href="<?php echo esc_url( $btn_url ); ?>" target="<?php echo esc_attr( $btn_target ); ?>"><?php echo esc_html( $btn_title ); ?><svg xmlns="http://www.w3.org/2000/svg" width="5.143" height="8.871" class="ml-2"><g fill="none" stroke="#cba884" stroke-linecap="round" data-name="Grupo 99"><path d="m.707.707 3.728 3.728" data-name="Linha 36"/><path d="M4.436 4.435.708 8.163" data-name="Linha 37"/></g></svg></a>
+			<?php
+		endif;
+		?>
 	</div>
 </article>
