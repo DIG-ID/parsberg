@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Zimmer Section
-    let zimmerTargets = gsap.utils.toArray([".zimmer-card .details .title", ".zimmer-card .details .subtitle", '.zimmer-card .details .description', '.zimmer-card .details a']);
+    let zimmerTargets = gsap.utils.toArray([".zimmer-card .details .title", ".zimmer-card .details .subtitle", '.zimmer-card .details .description', '.zimmer-card a']);
 
     let zimmerA = gsap.from( zimmerTargets, {
       duration: 1,
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
         start: '-50px 40%',
         end: '60% 60%',
         scrub: 1,
-        markers: true,
+        //markers: true,
         toggleActions: 'play pause reverse reset',
       }
     });
