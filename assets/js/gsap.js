@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Zimmer Section
-    let zimmerTargets = gsap.utils.toArray([".zimmer-card .details .title", ".zimmer-card .details .subtitle", '.zimmer-card .details .description']);
+    let zimmerTargets = gsap.utils.toArray([".zimmer-card .details .title", ".zimmer-card .details .subtitle", '.zimmer-card .details .description', '.zimmer-card .details a']);
 
     let zimmerA = gsap.from( zimmerTargets, {
       duration: 1,
