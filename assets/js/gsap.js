@@ -51,16 +51,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let zimmerA = gsap.from( zimmerTargets, {
       duration: 1,
-      y: '-50px',
+      y: '50px',
       opacity: 0,
-      stagger: 0.15,
+      stagger: 0.25,
       scrollTrigger: {
-        trigger: '.zimmer-card',
+        //trigger: '.zimmer-card',
         start: '-50px 40%',
         end: '60% 60%',
         scrub: 1,
-        //markers: true,
-        toggleActions: 'play pause reverse reset',
+        markers: true,
+        toggleActions: 'play pause pause reset',
       }
     });
 
