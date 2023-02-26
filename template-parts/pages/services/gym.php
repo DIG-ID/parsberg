@@ -9,11 +9,21 @@
 		<p class="text-main-green text-sm leading-8 tracking-wider"><?php the_field( 'gym_description' ); ?></p>
 	</div>
 	<div class="cols-span-1 lg:col-span-8 mb-8 lg:mb-0 order-1 lg:order-2">
-		<?php
-		$image = get_field( 'gym_image' );
-		if ( ! empty( $image ) ) :
-			echo '<div class="image-wrapper relative"><span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-lighten"></span><img class="w-full object-cover max-h-[650px]" src="' . esc_url( $image['url'] ) . '" alt="' . esc_attr( $image['alt'] ) . '" /></div>';
-		endif;
-		?>
+	<?php 
+	$gym_images = get_field('gym_gym_slider');
+	if( $gym_images ): ?>
+		<div id="gym-slider" class="swiper gym-swiper">
+			<div class="swiper-wrapper">
+				<?php foreach ( $gym_images as $gym_image ) : ?>
+					<a class="swiper-slide" data-fancybox="gym_gallery" href="<?php echo esc_url( $gym_image['url'] ); ?>" data-caption="<?php echo esc_html($gym_image['caption']); ?>" >
+						<span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-lighten"></span>
+						<img class="w-full object-cover max-h-[650px]" src="<?php echo esc_url( $gym_image['url'] ); ?>" alt="<?php echo esc_attr( $gym_image['alt'] ); ?>" />
+					</a>
+				<?php endforeach; ?>
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+	<?php endif; ?>
 	</div>
 </section>
