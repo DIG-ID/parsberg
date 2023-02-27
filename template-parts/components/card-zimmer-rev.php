@@ -19,6 +19,6 @@
 			</p>
 			<p class="description text-sm text-main-green leading-8 tracking-wider mb-10 lg:mb-0"><?php echo get_the_excerpt(); ?></p>
 		</div>
-		<a class="button inline-block lg:block text-sm text-center font-normal tracking-widest uppercase py-4 px-16 lg:px-0 border border-main-beige lg:w-full transition-all duration-500 ease-in-out hover:bg-main-green hover:border-main-green hover:text-main-beige" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Zu den Zimmern', 'parsberg' ); ?></a>
+		<a class="section-btn inline-block lg:block text-sm text-center font-normal tracking-widest uppercase py-4 px-16 lg:px-0 border border-main-beige lg:w-full hover:bg-main-green hover:border-main-green hover:text-main-beige" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Zu den Zimmern', 'parsberg' ); ?></a>
 	</div>
 </article>

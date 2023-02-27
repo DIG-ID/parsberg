@@ -15,7 +15,7 @@
 	<?php
 	$image = get_field( 'intro_section_image' );
 	if ( ! empty( $image ) ) :
-		echo '<div class="image-wrapper relative"><span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-screen"></span><img class="w-full min-h-[375px] object-cover lg:max-h-[650px]" src="' . esc_url( $image['url'] ) . '" alt="' . esc_attr( $image['alt'] ) . '" /></div>';
+		echo '<div class="image-wrapper relative bg-cover bg-no-repeat bg-center bg-fixed min-h-[375px] lg:min-h-[650px]" style="background-image: url(' . esc_url( $image['url'] ) . ')"><span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-screen"></span></div>';
 	endif;
 	?>
 </section>

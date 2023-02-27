@@ -2,11 +2,11 @@
 	<div class="lg:container mx-auto grid grid-cols-1 lg:grid-cols-12 pb-20 px-8 lg:px-0 order-2 lg:order-1">
 		<div class="col-span-1 lg:col-start-2 lg:col-span-3">
 			<h2 class="title text-3xl font-bold text-main-green mb-12"><?php the_field( 'activities_section_title' ); ?></h2>
-			<a href="<?php the_field( 'activities_section_button_url' ); ?>" class="text-sm text-center font-normal tracking-widest uppercase py-4 border border-main-beige w-full transition-all duration-500 ease-in-out hover:bg-main-green hover:border-main-green hover:text-main-beige hidden lg:block"><?php the_field( 'activities_section_button_name' ); ?></a>
+			<a href="<?php the_field( 'activities_section_button_url' ); ?>" class="section-btn text-sm text-center font-normal tracking-widest uppercase py-4 border border-main-beige w-full hover:bg-main-green hover:border-main-green hover:text-main-beige hidden lg:block"><?php the_field( 'activities_section_button_name' ); ?></a>
 		</div>
 		<div class="col-span-1 lg:col-start-6 lg:col-span-6">
 			<p class="description text-main-green text-sm leading-8 tracking-wider mb-12 lg:mb-0"><?php the_field( 'activities_section_description' ); ?></p>
-			<a href="<?php the_field( 'activities_section_button_url' ); ?>" class="button inline-block text-sm text-center font-normal tracking-widest uppercase py-4 px-16 lg:px-0 border border-main-beige lg:w-full transition-all duration-500 ease-in-out hover:bg-main-green hover:border-main-green hover:text-main-beige lg:hidden"><?php the_field( 'activities_section_button_name' ); ?></a>
+			<a href="<?php the_field( 'activities_section_button_url' ); ?>" class="section-btn inline-block text-sm text-center font-normal tracking-widest uppercase py-4 px-16 lg:px-0 border border-main-beige lg:w-full hover:bg-main-green hover:border-main-green hover:text-main-beige lg:hidden"><?php the_field( 'activities_section_button_name' ); ?></a>
 		</div>
 
 	</div>

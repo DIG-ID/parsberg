@@ -45,9 +45,43 @@ document.addEventListener("DOMContentLoaded", () => {
         animation: locationtl
       });
 
+      // Zimmer Section
+      let zimmerATargets = gsap.utils.toArray([".zimmer-card .title", ".zimmer-card .subtitle", ".zimmer-card .description", ".zimmer-card .section-btn"]);
+      let zimmerAtl = gsap.timeline({
+        defaults: {
+          duration: 1,
+        },
+        scrollTrigger: {
+          trigger: '.zimmer-card',
+          start: '-50px 40%',
+          end: '60% 60%',
+          //scrub: 1,
+          //markers: true,
+        }
+      });
+      zimmerAtl.from( zimmerATargets, {y: '50px', opacity: 0, stagger: 0.25});
+      zimmerAtl.from( ".zimmer-card .image-wrapper", {clipPath: 'inset(0 0 0 100%)'}, '<');
+
+      // Zimmer Rev Section
+      let zimmerBTargets = gsap.utils.toArray([".zimmer-card--rev .title", ".zimmer-card--rev .subtitle", ".zimmer-card--rev .description", ".zimmer-card--rev .section-btn"]);
+      let zimmerBtl = gsap.timeline({
+        defaults: {
+          duration: 1,
+        },
+        scrollTrigger: {
+          trigger: '.zimmer-card--rev',
+          start: '-50px 40%',
+          end: '60% 60%',
+          //scrub: 1,
+          //markers: true,
+        }
+      });
+      zimmerBtl.from( ".zimmer-card--rev .image-wrapper", {clipPath: 'inset(0 100% 0 0)'});
+      zimmerBtl.from( zimmerBTargets, {y: '50px',  opacity: 0, stagger: 0.25}, '<');
+      
       // Aktivitaten Section
-      let aktivitatenTargets = gsap.utils.toArray([".section-activities .title", ".section-activities .description", ".section-activities .button"]);
-      let aktivitaten = gsap.from( aktivitatenTargets, {
+      let aktivitatenTargets = gsap.utils.toArray([".section-activities .title", ".section-activities .description", ".section-activities .section-btn"]);
+      gsap.from( aktivitatenTargets, {
         duration: 1,
         y: '50px',
         opacity: 0,
@@ -60,9 +94,10 @@ document.addEventListener("DOMContentLoaded", () => {
           //markers: true,
         }
       });
+
       // About Section
-      let aboutTargets = gsap.utils.toArray([".section-about .title", ".section-about .description", ".section-about .button"]);
-      let about = gsap.from( aboutTargets, {
+      let aboutTargets = gsap.utils.toArray([".section-about .title", ".section-about .description", ".section-about .section-btn"]);
+      gsap.from( aboutTargets, {
         duration: 1,
         y: '50px',
         opacity: 0,
@@ -77,65 +112,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // Zimmer Section
-    let zimmerTargetsA = gsap.utils.toArray([".zimmer-card .title", ".zimmer-card .subtitle", ".zimmer-card .description", ".zimmer-card .button"]);
-    let zimmerA = gsap.from( zimmerTargetsA, {
-      duration: 1,
-      y: '50px',
-      opacity: 0,
-      stagger: 0.25,
-      scrollTrigger: {
-        trigger: '.zimmer-card',
-        start: '-50px 40%',
-        end: '60% 60%',
-        //scrub: 1,
-        //markers: true,
-      }
-    });
-    let zimmerAimg = gsap.from( ".zimmer-card .image-wrapper", {
-      duration: 1,
-      clipPath: 'inset(0 0 0 100%)',
-      stagger: 0.25,
-      scrollTrigger: {
-        trigger: '.zimmer-card .image-wrapper',
-        start: '-50px 40%',
-        end: '60% 60%',
-        //scrub: 1,
-        //markers: true,
-      }
-    });
-
-    // Zimmer Section
-    let zimmerTargetsB = gsap.utils.toArray([".zimmer-card--rev .title", ".zimmer-card--rev .subtitle", ".zimmer-card--rev .description", ".zimmer-card--rev .button"]);
-    let zimmerB = gsap.from( zimmerTargetsB, {
-      duration: 1,
-      y: '50px',
-      opacity: 0,
-      stagger: 0.25,
-      scrollTrigger: {
-        trigger: '.zimmer-card--rev',
-        start: '-50px 40%',
-        end: '60% 60%',
-        //scrub: 1,
-        //markers: true,
-      }
-    });
-    let zimmerBimg = gsap.from( ".zimmer-card--rev .image-wrapper", {
-      duration: 1,
-      clipPath: 'inset(0 100% 0 0)',
-      stagger: 0.25,
-      scrollTrigger: {
-        trigger: '.zimmer-card--rev .image-wrapper',
-        start: '-50px 40%',
-        end: '60% 60%',
-        //scrub: 1,
-        //markers: true,
-      }
-    });
-
     // Services Section
-    let servicesTargets = gsap.utils.toArray([".section-services .title", ".section-services .description", ".section-services .list", ".section-services .button"]);
-    let services = gsap.from( servicesTargets, {
+    let servicesTargets = gsap.utils.toArray([".section-services .title", ".section-services .description", ".section-services .list", ".section-services .section-btn"]);
+    gsap.from( servicesTargets, {
       duration: 1,
       y: '50px',
       opacity: 0,
@@ -148,7 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
         //markers: true,
       }
     });
-
 
     /* menu open/close */
     const toggleBtn = document.querySelector('.menu-button');

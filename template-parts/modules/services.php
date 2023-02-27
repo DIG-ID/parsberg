@@ -13,7 +13,7 @@
 			echo '</ul>';
 		endif;
 		?>
-		<a href="<?php the_field( 'services_section_button_url', 'option' ); ?>" class="button inline-block text-sm text-center font-normal tracking-widest uppercase py-4 px-16 border border-main-beige transition-all duration-500 ease-in-out hover:bg-main-green hover:border-main-green hover:text-main-beige"><?php the_field( 'services_section_button_name', 'option' ); ?></a>
+		<a href="<?php the_field( 'services_section_button_url', 'option' ); ?>" class="section-btn inline-block text-sm text-center font-normal tracking-widest uppercase py-4 px-16 border border-main-beige hover:bg-main-green hover:border-main-green hover:text-main-beige"><?php the_field( 'services_section_button_name', 'option' ); ?></a>
 	</div>
 	<?php
 	$image = get_field( 'services_section_image', 'option' );

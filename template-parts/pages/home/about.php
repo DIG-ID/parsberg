@@ -8,6 +8,6 @@
 	<div class="about-content col-span-1 lg:col-start-9 lg:col-span-3">
 		<h2 class="title text-3xl font-bold mb-12"><?php the_field( 'about_us_section_title' ); ?></h2>
 		<p class="description text-sm leading-8 tracking-wider mb-12"><?php the_field( 'about_us_section_description' ); ?></p>
-		<a href="<?php the_field( 'about_us_section_button_url' ); ?>" class="button inline-block lg:block text-sm text-center font-normal tracking-widest uppercase py-4 px-16 lg:px-0 border border-main-beige lg:w-full transition-all duration-500 ease-in-out hover:bg-main-green hover:border-main-green hover:text-main-beige"><?php the_field( 'about_us_section_button_name' ); ?></a>
+		<a href="<?php the_field( 'about_us_section_button_url' ); ?>" class="section-btn inline-block lg:block text-sm text-center font-normal tracking-widest uppercase py-4 px-16 lg:px-0 border border-main-beige lg:w-full hover:bg-main-green hover:border-main-green hover:text-main-beige"><?php the_field( 'about_us_section_button_name' ); ?></a>
 	</div>
 </section>
