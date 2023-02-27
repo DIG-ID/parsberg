@@ -6,7 +6,7 @@
 		</div>
 		<div class="col-span-1 lg:col-start-6 lg:col-span-6">
 			<p class="description text-main-green text-sm leading-8 tracking-wider mb-12 lg:mb-0"><?php the_field( 'activities_section_description' ); ?></p>
-			<a href="<?php the_field( 'activities_section_button_url' ); ?>" class="inline-block text-sm text-center font-normal tracking-widest uppercase py-4 px-16 lg:px-0 border border-main-beige lg:w-full transition-all duration-500 ease-in-out hover:bg-main-green hover:border-main-green hover:text-main-beige lg:hidden"><?php the_field( 'activities_section_button_name' ); ?></a>
+			<a href="<?php the_field( 'activities_section_button_url' ); ?>" class="button inline-block text-sm text-center font-normal tracking-widest uppercase py-4 px-16 lg:px-0 border border-main-beige lg:w-full transition-all duration-500 ease-in-out hover:bg-main-green hover:border-main-green hover:text-main-beige lg:hidden"><?php the_field( 'activities_section_button_name' ); ?></a>
 		</div>
 
 	</div>

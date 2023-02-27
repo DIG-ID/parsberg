@@ -19,7 +19,7 @@ endif;
 		</svg>
 	</span>
 	<h1 class="section-hero-title font-sans font-semibold text-3xl lg:text-5xl text-center text-main-beige tracking-wider"><?php the_field( 'hero_section_title' ); ?></h1>
-	<a href="#next-section" class="section-hero-scroll absolute hidden lg:flex justify-center bottom-20 left-2/4 -translate-x-2/4 border-2 w-[40px] h-[65px] pt-4 border-main-beige text-main-beige rounded-full"><span class="block w-1 h-3 bg-main-beige rounded-full animate-bounce"></span></a>
+	<a href="#home-intro" class="section-hero-scroll absolute hidden lg:flex justify-center bottom-20 left-2/4 -translate-x-2/4 border-2 w-[40px] h-[65px] pt-4 border-main-beige text-main-beige rounded-full"><span class="block w-1 h-3 bg-main-beige rounded-full animate-bounce"></span></a>
 	<div class="section-hero__video-wrapper flex flex-col lg:hidden absolute w-full bg-cover bottom-0 justify-center" style="background: linear-gradient(0, rgb(46 86 89 / 50%), rgb(46 86 89 / 50%))">
 		<video class="section-hero-video object-cover object-center h-full w-full" autoplay muted loop src="<?php echo esc_html($url); ?>" ></video>
 	</div>
