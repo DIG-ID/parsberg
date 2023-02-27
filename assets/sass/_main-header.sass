@@ -106,3 +106,16 @@ body.menu-open
         font-weight: 600
         &:hover
           color: darken(#CBA884, 20%)
+
+@media (max-width:1024px)
+  .navigation-mobile
+    padding-top: 100px
+
+@media (max-width:640px)
+  .navigation-mobile
+    padding-bottom: 100px
+    justify-content: flex-end
+    .navbar-nav
+      .menu-item
+        .nav-link
+          font-size: 21px
