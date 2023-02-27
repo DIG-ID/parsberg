@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
         trigger: '.section-intro',
         start: 'top 60%',
         end: '20% 60%',
-        scrub: 1,
+        //scrub: 1,
         //markers: true,
-        toggleActions: 'play pause reverse reset',
+        //toggleActions: 'play pause reverse reset',
         animation: introtl
       });
 
@@ -44,61 +44,107 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleActions: 'play pause reverse reset',
         animation: locationtl
       });
+
+      // Aktivitaten Section
+      let aktivitatenTargets = gsap.utils.toArray([".section-activities .title", ".section-section-activities .description", ".section-section-activities .list", ".section-services a"]);
+      let aktivitaten = gsap.from( aktivitatenTargets, {
+        duration: 1,
+        y: '50px',
+        opacity: 0,
+        stagger: 0.25,
+        scrollTrigger: {
+          trigger: '.section-activities',
+          start: '-50px 40%',
+          end: '60% 60%',
+          //scrub: 1,
+          //markers: true,
+        }
+      });
     }
 
     // Zimmer Section
-    let zimmerTargets = gsap.utils.toArray([".zimmer-card .details .title", ".zimmer-card .details .subtitle", '.zimmer-card .details .description', '.zimmer-card a']);
-
-    let zimmerA = gsap.from( zimmerTargets, {
+    let zimmerTargetsA = gsap.utils.toArray([".zimmer-card .details .title", ".zimmer-card .details .subtitle", ".zimmer-card .details .description", ".zimmer-card a"]);
+    let zimmerA = gsap.from( zimmerTargetsA, {
       duration: 1,
       y: '50px',
       opacity: 0,
       stagger: 0.25,
       scrollTrigger: {
-        //trigger: '.zimmer-card',
+        trigger: '.zimmer-card',
         start: '-50px 40%',
         end: '60% 60%',
-        scrub: 1,
-        markers: true,
-        toggleActions: 'play pause pause reset',
+        //scrub: 1,
+        //markers: true,
+      }
+    });
+
+    // Zimmer Section
+    let zimmerTargetsB = gsap.utils.toArray([".zimmer-card--rev .details .title", ".zimmer-card--rev .details .subtitle", ".zimmer-card--rev .details .description", ".zimmer-card--rev a"]);
+    let zimmerB = gsap.from( zimmerTargetsB, {
+      duration: 1,
+      y: '50px',
+      opacity: 0,
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: '.zimmer-card--rev',
+        start: '-50px 40%',
+        end: '60% 60%',
+        //scrub: 1,
+        //markers: true,
+      }
+    });
+
+    // Services Section
+    let servicesTargets = gsap.utils.toArray([".section-services .title", ".section-services .description", ".section-services .list", ".section-services a"]);
+    let services = gsap.from( servicesTargets, {
+      duration: 1,
+      y: '50px',
+      opacity: 0,
+      stagger: 0.25,
+      scrollTrigger: {
+        trigger: '.section-services',
+        start: '-50px 40%',
+        end: '60% 60%',
+        //scrub: 1,
+        //markers: true,
       }
     });
 
 
     /* menu open/close */
     const toggleBtn = document.querySelector('.menu-button');
-
     let togglerTl = gsap.timeline({
       defaults: {
-        duration: 0.5
+        duration: 0.4
       },
       onReverseComplete: () => {
         gsap.set( ".main-header", {
           clearProps: "backgroundColor"
         } );
+        gsap.set( ".menu-button .toggle .bar", {
+          clearProps: "backgroundColor"
+        } );
+        gsap.set( ".main-header .book-button", {
+          clearProps: "backgroundColor,color"
+        } );
       }
     });
-    togglerTl.to('.main-header', { backgroundColor: 'var(--main-green)', minHeight: '100vh'});
-    togglerTl.to('.navigation-mobile', { y: '0%'}, '<');
-    togglerTl.to('.navigation-mobile', { opacity: 1}, '<0.25');
-    togglerTl.from('.navigation-mobile .nav-link', { x: '-50px', opacity: 0, stagger: 0.25 }, '<0.25');
+    togglerTl.to('.main-header', {backgroundColor: 'var(--main-green)', minHeight: '100vh'});
+    togglerTl.to('.navigation-mobile', {y: '0%'}, '<');
+    togglerTl.to('.navigation-mobile', {opacity: 1}, '<0.25');
+    togglerTl.to('.main-header .menu-button .toggle .bar', {backgroundColor: 'var(--main-beige)'}, '<0.25');
+    togglerTl.to('.main-header .book-button', {backgroundColor: 'var(--main-beige)', color: 'var(--main-green)', opacity: 1}, '<0.25');
+    togglerTl.from('.navigation-mobile .nav-link', {x: '-50px', opacity: 0, stagger: 0.20}, '<0.25');
     togglerTl.paused(true);
 
     toggleBtn.addEventListener( 'click', (e) => {
-      const bookButtons = document.querySelectorAll('.book-button'); // Select all buttons with the class "book-button"
-      bookButtons.forEach(button => {
-        button.classList.toggle('bg-main-green');
-        button.classList.toggle('text-main-beige');
-        button.classList.toggle('bg-main-beige');
-        button.classList.toggle('text-main-green');
-      });
       document.body.classList.toggle('menu-open');
       if (togglerTl.paused()) {
         togglerTl.play();
       } else if (togglerTl.reversed()) {
-        togglerTl.restart();
+        togglerTl.restart().timeScale(1);
       } else {
-        togglerTl.reverse();
+        togglerTl.timeScale(2).reverse();
       }
     });
 

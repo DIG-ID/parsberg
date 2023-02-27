@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'zimmer-card grid grid-cols-1 lg:grid-cols-12 mb-20 lg:mb-24 lg:min-h-[560px] lg:mr-14 lg:gap-8' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'zimmer-card--rev grid grid-cols-1 lg:grid-cols-12 mb-20 lg:mb-24 lg:min-h-[560px] lg:mr-14 lg:gap-8' ); ?>>
 <?php
 	if ( has_post_thumbnail() ) :
 		?>
