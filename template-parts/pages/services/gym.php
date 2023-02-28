@@ -5,8 +5,12 @@
 	<div class="col-span-1 lg:col-span-8">
 		<h2 class="text-xl lg:text-2xl font-bold mb-8"><?php the_field( 'gym_title' ); ?></h2>
 	</div>
-	<div class="col-span-1 lg:col-start-2 lg:col-span-3 lg:ml-7 lg:mr-20 order-2 lg:order-1">
+	<div class="section-gym__col1 relative col-span-1 lg:col-start-2 lg:col-span-3 lg:ml-7 lg:mr-20 order-2 lg:order-1">
 		<p class="text-main-green text-sm leading-8 tracking-wider"><?php the_field( 'gym_description' ); ?></p>
+		<div class="swiper-buttons-wrapper block relative h-12 w-24 mt-5">
+			<div class="swiper-button-next g-swiper-button-next"></div>
+			<div class="swiper-button-prev g-swiper-button-prev"></div>
+		</div>
 	</div>
 	<div class="cols-span-1 lg:col-span-8 mb-8 lg:mb-0 order-1 lg:order-2">
 	<?php 
@@ -15,14 +19,13 @@
 		<div id="gym-slider" class="swiper gym-swiper">
 			<div class="swiper-wrapper">
 				<?php foreach ( $gym_images as $gym_image ) : ?>
-					<a class="swiper-slide" data-fancybox="gym_gallery" href="<?php echo esc_url( $gym_image['url'] ); ?>" data-caption="<?php echo esc_html($gym_image['caption']); ?>" >
+					<a class="swiper-slide">
 						<span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green/75 mix-blend-lighten"></span>
 						<img class="w-full object-cover max-h-[650px]" src="<?php echo esc_url( $gym_image['url'] ); ?>" alt="<?php echo esc_attr( $gym_image['alt'] ); ?>" />
 					</a>
 				<?php endforeach; ?>
 			</div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
+			
 		</div>
 	<?php endif; ?>
 	</div>

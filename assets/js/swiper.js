@@ -26,16 +26,16 @@ $(function() {
       loop: true,
       spaceBetween: 10,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".b-swiper-button-next",
+        prevEl: ".b-swiper-button-prev",
       },
     });
     var gymSwiper = new Swiper(".gym-swiper", {
       loop: true,
       spaceBetween: 10,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".g-swiper-button-next",
+        prevEl: ".g-swiper-button-prev",
       },
     });
   }
