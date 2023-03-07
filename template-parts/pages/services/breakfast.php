@@ -1,18 +1,18 @@
 <section class="section-breakfast grid auto-rows-auto grid-cols-2 lg:grid-cols-12 pb-20 lg:pb-40 px-8 lg:px-0">
 	<div class="col-span-2 lg:col-start-2 lg:col-span-3 lg:ml-0 lg:mr-0 xl:ml-7 xl:mr-20 flex flex-col justify-between mb-10 lg:mb-0">
-		<p class="flex items-center text-sm text-main-green font-semibold tracking-wider uppercase"><span class="block w-20 h-px bg-main-green mr-5"></span><?php the_field( 'breakfast_small_title' ); ?></p>
+		<p class="section-breakfast-small-title flex items-center text-sm text-main-green font-semibold tracking-wider uppercase invisible"><span class="block w-20 h-px bg-main-green mr-5"></span><?php the_field( 'breakfast_small_title' ); ?></p>
 	</div>
 	<div class="col-span-2 lg:col-span-8 mb-8">
-		<h2 class="text-xl lg:text-2xl font-bold"><?php the_field( 'breakfast_title' ); ?></h2>
+		<h2 class="section-breakfast-title text-xl lg:text-2xl font-bold invisible"><?php the_field( 'breakfast_title' ); ?></h2>
 	</div>
 	<div class="section-breakfast__col1 col-span-2 relative mb-10 lg:mb-0 lg:col-start-2 lg:col-span-3 lg:ml-7 lg:mr-20 order-2 lg:order-1">
-		<p class="text-main-green text-sm leading-8 tracking-wider"><?php the_field( 'breakfast_description' ); ?></p>
+		<p class="section-breakfast-description text-main-green text-sm leading-8 tracking-wider invisible"><?php the_field( 'breakfast_description' ); ?></p>
 	</div>
 	<div class="col-span-2 lg:col-span-8 order-1 lg:order-2 mb-10 lg:mb-0">
 	<?php 
 	$bf_images = get_field('breakfast_breakfast_slider');
 	if( $bf_images ): ?>
-		<div id="breakfast-slider" class="swiper breakfast-swiper">
+		<div id="breakfast-slider" class="swiper breakfast-swiper invisible">
 			<div class="swiper-wrapper">
 				<?php foreach ( $bf_images as $bf_image ) : ?>
 					<a class="swiper-slide">

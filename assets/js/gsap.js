@@ -165,9 +165,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-
-
-
-
+    if (document.body.classList.contains("page-template-page-services")) {
+      // Intro Section
+      let intro = gsap.timeline({
+        defaults: {
+          duration: 1.2,
+          autoAlpha: 0
+        }
+      });
+      intro.from('.section-intro-title, .section-intro-description', { y: '50px', opacity: 0, stagger:0.25 });
+      intro.from('.section-breakfast-small-title, .section-breakfast-description', { x: '-50px', opacity: 0, stagger:0.25}, '<0.25');
+      intro.from('.section-breakfast-title, .breakfast-swiper', { x: '50px', opacity: 0, stagger:0.25},'<0.25');
+      
+    }
   }, false);
 });
