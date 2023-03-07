@@ -1,4 +1,4 @@
-<section class="section-breakfast grid auto-rows-auto grid-cols-2 lg:grid-cols-12 pb-20 lg:pb-40 px-8 lg:px-0">
+<section class="section-breakfast grid auto-rows-auto grid-cols-2 lg:grid-cols-12 pb-20 lg:pb-40 px-8 lg:px-0 overflow-hidden">
 	<div class="col-span-2 lg:col-start-2 lg:col-span-3 lg:ml-0 lg:mr-0 xl:ml-7 xl:mr-20 flex flex-col justify-between mb-10 lg:mb-0">
 		<p class="section-breakfast-small-title flex items-center text-sm text-main-green font-semibold tracking-wider uppercase invisible"><span class="block w-20 h-px bg-main-green mr-5"></span><?php the_field( 'breakfast_small_title' ); ?></p>
 	</div>

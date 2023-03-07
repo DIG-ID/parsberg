@@ -9,41 +9,45 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", () => {
     if (document.body.classList.contains("page-template-page-home")) {
       //Hero Section
-      let herotl = gsap.timeline();
-      herotl.to(".section-hero-mask", {duration: 2, delay: 1, clipPath: 'inset(0 0 100% 0)'});
-      herotl.from(".section-hero-scroll", {duration: 2, y: 50, opacity: 0}, "<");
-      herotl.from(".section-hero-title", {duration: 2, y: 50, opacity: 0}, "<0.5");
-      herotl.from(".button, #site-logo-wrapper", {duration: 1.5, y: 50, opacity: 0, stagger: 0.15}, "<0.5");
+      let herotl = gsap.timeline()
+      .to(".section-hero-mask", {duration: 2, delay: 1, clipPath: 'inset(0 0 100% 0)'})
+      .from(".section-hero-scroll", {duration: 2, y: 50, opacity: 0}, "<")
+      .from(".section-hero-title", {duration: 2, y: 50, opacity: 0}, "<0.5")
+      .from(".button, #site-logo-wrapper", {duration: 1.5, y: 50, opacity: 0, stagger: 0.15}, "<0.5");
 
-      // Intro Section
-      let introtl = gsap.timeline({ defaults: { duration: 1 } });
-      introtl.from('.section-intro .section-title', { x: '-50px', opacity: 0 });
-      introtl.from('.section-intro .section-description', { x: '50px', opacity: 0 }, '<');
-      introtl.from('.section-intro .section-hero-symbol', { opacity: 0 }, '<');
-      let introSt = ScrollTrigger.create({
-        trigger: '.section-intro',
-        start: 'top 60%',
-        end: '20% 60%',
-        //scrub: 1,
-        //markers: true,
-        //toggleActions: 'play pause reverse reset',
-        animation: introtl
-      });
+      // Home Intro Section
+      let homeIntro = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.section-intro',
+          start: 'top 60%',
+          end: '20% 60%',
+          toggleActions: 'play none none none',
+        },
+        defaults: {
+          duration: 1
+        }
+      })
+      .from('.section-intro .section-title', { x: '-50px', opacity: 0 })
+      .from('.section-intro .section-description', { x: '50px', opacity: 0 }, '<')
+      .from('.section-intro .section-hero-symbol', { opacity: 0 }, '<');
 
       // Location Section
-      let locationtl = gsap.timeline({ defaults: { duration: 1 } });
-      locationtl.from('.section-location svg', { y: '-50px', opacity: 0 });
-      locationtl.from('.section-location span', { opacity: 0 }, '<');
-      locationtl.from('.section-location p', { y: '-50px', opacity: 0 });
-      let locationSt = ScrollTrigger.create({
-        trigger: '.section-location',
-        start: '-50px 40%',
-        end: '60% 60%',
-        scrub: 1,
-        //markers: true,
-        toggleActions: 'play pause reverse reset',
-        animation: locationtl
-      });
+      let location = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.section-location',
+          start: '-50px 40%',
+          end: '60% 60%',
+          scrub: 1,
+          //markers: true,
+          toggleActions: 'play pause reverse reset',
+        },
+        defaults: {
+          duration: 1
+        },
+      })
+      .from('.section-location svg', { y: '-50px', opacity: 0 })
+      .from('.section-location span', { opacity: 0 }, '<')
+      .from('.section-location p', { y: '-50px', opacity: 0 });
 
       // Zimmer Section
       let zimmerATargets = gsap.utils.toArray([".zimmer-card .title", ".zimmer-card .subtitle", ".zimmer-card .description", ".zimmer-card .section-btn"]);
@@ -110,6 +114,15 @@ document.addEventListener("DOMContentLoaded", () => {
           //markers: true,
         }
       });
+    } else {
+      // Intro Section
+      let intro = gsap.timeline({
+        defaults: {
+          duration: 1.2,
+          autoAlpha: 0
+        }
+      })
+      .from('.section-intro-title, .section-intro-small-title, .section-intro-description', { y: '50px', opacity: 0, stagger:0.25});
     }
 
     // Services Section
@@ -145,14 +158,14 @@ document.addEventListener("DOMContentLoaded", () => {
           clearProps: "backgroundColor,color"
         } );
       }
-    });
-    togglerTl.to('.main-header', {backgroundColor: 'var(--main-green)', minHeight: '100vh'});
-    togglerTl.to('.navigation-mobile', {y: '0%'}, '<');
-    togglerTl.to('.navigation-mobile', {opacity: 1}, '<0.25');
-    togglerTl.to('.main-header .menu-button .toggle .bar', {backgroundColor: 'var(--main-beige)'}, '<0.25');
-    togglerTl.to('.main-header .book-button', {backgroundColor: 'var(--main-beige)', color: 'var(--main-green)', opacity: 1}, '<0.25');
-    togglerTl.from('.navigation-mobile .nav-link', {x: '-50px', opacity: 0, stagger: 0.20}, '<0.25');
-    togglerTl.paused(true);
+    })
+    .to('.main-header', {backgroundColor: 'var(--main-green)', minHeight: '100vh'})
+    .to('.navigation-mobile', {y: '0%'}, '<')
+    .to('.navigation-mobile', {opacity: 1}, '<0.25')
+    .to('.main-header .menu-button .toggle .bar', {backgroundColor: 'var(--main-beige)'}, '<0.25')
+    .to('.main-header .book-button', {backgroundColor: 'var(--main-beige)', color: 'var(--main-green)', opacity: 1}, '<0.25')
+    .from('.navigation-mobile .nav-link', {x: '-50px', opacity: 0, stagger: 0.20}, '<0.25')
+    .paused(true);
 
     toggleBtn.addEventListener( 'click', (e) => {
       document.body.classList.toggle('menu-open');
@@ -165,18 +178,78 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+
+
     if (document.body.classList.contains("page-template-page-services")) {
-      // Intro Section
-      let intro = gsap.timeline({
+      // Breakfast Section
+      let breakfast = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.section-breakfast',
+          start:"top 50%",
+          end:"bottom top",
+          //markers: true,
+          toggleActions:"restart none none none"
+        },
         defaults: {
           duration: 1.2,
           autoAlpha: 0
-        }
-      });
-      intro.from('.section-intro-title, .section-intro-description', { y: '50px', opacity: 0, stagger:0.25 });
-      intro.from('.section-breakfast-small-title, .section-breakfast-description', { x: '-50px', opacity: 0, stagger:0.25}, '<0.25');
-      intro.from('.section-breakfast-title, .breakfast-swiper', { x: '50px', opacity: 0, stagger:0.25},'<0.25');
-      
+        },
+      })
+      .from('.section-breakfast-small-title, .section-breakfast-description', { x: '-50px', opacity: 0, stagger:0.25})
+      .from('.section-breakfast-title, .breakfast-swiper', { x: '50px', opacity: 0, stagger:0.25},'<0.25');
+      // Gym Section
+      let gym = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.section-gym',
+          start:"top 50%",
+          end:"bottom top",
+          //markers: true,
+          toggleActions:"restart none none none"
+        },
+        defaults: {
+          duration: 1.2,
+          autoAlpha: 0,
+        },
+      })
+      .from( '.section-gym-small-title, .section-gym-description' ,{ x: '-50px', opacity: 0, stagger:0.2 })
+      .from( '.section-gym-title, .gym-swiper' ,{ x: '50px', opacity: 0, stagger:0.25}, '<0.25');
+    }
+    if (document.body.classList.contains("post-type-archive-zimmer")) {
+
+    }
+    if (document.body.classList.contains("post-type-archive-aktivitaten")) {
+      // Environment Section
+      let envir = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.section-environment',
+          start:"top 50%",
+          end:"bottom top",
+          //markers: true,
+          toggleActions:"restart none none none"
+        },
+        defaults: {
+          duration: 1.2,
+          autoAlpha: 0,
+        },
+      })
+      .from( '.section-environment-small-title, .section-environment-description' ,{ x: '-50px', opacity: 0, stagger:0.2 })
+      .from( '.section-environment-title, .section-environment-image' ,{ x: '50px', opacity: 0, stagger:0.25}, '<0.25');
+      // Connection Section
+      let connec = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.section-connection',
+          start:"top 50%",
+          end:"bottom top",
+          //markers: true,
+          toggleActions:"restart none none none"
+        },
+        defaults: {
+          duration: 1.2,
+          autoAlpha: 0,
+        },
+      })
+      .from( '.section-connection-small-title, .section-connection-description' ,{ x: '-50px', opacity: 0, stagger:0.2 })
+      .from( '.section-connection-title, .section-connection-image' ,{ x: '50px', opacity: 0, stagger:0.25}, '<0.25');
     }
   }, false);
 });
