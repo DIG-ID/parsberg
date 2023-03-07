@@ -6,8 +6,8 @@
 		<div class="contacts-wrapper mb-8 flex-col col-span-2 lg:flex-col lg:col-start-4 lg:col-span-2 px-2 lg:px-0 gap-4 lg:gap-0">
 			<div class="address basis-0 lg:basis-0 mb-8">
 				<h4 class="text-xs font-normal tracking-widest uppercase mb-4">Adresse</h4>
-				<p class="leading-6">Hotel Parsberg
-					Augsburger Strasse 1
+				<p class="leading-6">Hotel Parsberg<br>
+					Augsburger Strasse 1<br>
 					D-82178 Puchheim</p>
 			</div>
 			<div class="contacts basis-0 lg:basis-0">
