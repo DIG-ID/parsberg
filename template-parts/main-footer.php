@@ -12,8 +12,8 @@
 			</div>
 			<div class="contacts basis-0 lg:basis-0">
 				<h4 class="text-xs font-normal tracking-widest uppercase mb-4">Kontakt</h4>
-				<a class="block leading-6" href="tel:">T: 089 / 80 09 90 - 0</a>
-				<a class="block leading-6" href="mailto:">E: post@hotel-parsberg.de</a>
+				<a class="block leading-6" href="tel:0898009900">T: 089 / 80 09 90 - 0</a>
+				<a class="block leading-6" href="mailto:post@hotel-parsberg.de">E: post@hotel-parsberg.de</a>
 			</div>
 		</div>
 		<div class="menu-siten mb-8 col-span-2 lg:col-start-8 lg:col-span-2 px-2 lg:px-0 leading-6">
