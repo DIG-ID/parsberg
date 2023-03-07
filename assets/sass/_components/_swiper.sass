@@ -1,0 +1,36 @@
+.swiper-button-next,
+.swiper-button-prev
+  width: auto
+  height: auto
+  padding-top: 30px
+  padding-bottom: 30px
+  color: #fff
+  background-color: var(--main-green)
+  transition: all .3s ease-in
+  &::after
+    display: none
+  &:hover
+    padding-left: 10px
+    padding-right: 10px
+    background-color: var(--main-beige)
+    svg
+      path
+        stroke: var(--main-green)
+  svg
+    max-width: 12px
+    path
+      stroke: #fff
+      transition: all .3s ease-in
+
+
+  
+.swiper-button-next
+  padding-right: 4px
+  padding-left: 6px
+  right: 0
+
+.swiper-button-prev
+  padding-right: 6px
+  padding-left: 4px
+  left: 0
+

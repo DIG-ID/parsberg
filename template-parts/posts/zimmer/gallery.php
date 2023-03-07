@@ -11,8 +11,8 @@ if ( $images ) : ?>
 					</a>
 				<?php endforeach; ?>
 			</div>
-			<div class="swiper-button-next"></div>
-			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"><svg width="18" height="32" viewBox="0 0 18 32" xml:space="preserve"><path d="m2.121 2.121 14.008 14.007m0 .001L2.121 30.136" style="fill:none;stroke-linecap:round;stroke-width:2px"/></svg></div>
+			<div class="swiper-button-prev"><svg width="18" height="32" viewBox="0 0 18 32" xml:space="preserve"><path d="M16.13 30.137 2.122 16.13m0-.001L16.13 2.122" style="fill:none;stroke-linecap:round;stroke-width:2px"/></svg></div>
 		</div>
 	</section>
 <?php endif;

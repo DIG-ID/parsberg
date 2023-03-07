@@ -7,10 +7,6 @@
 	</div>
 	<div class="section-breakfast__col1 col-span-2 relative mb-10 lg:mb-0 lg:col-start-2 lg:col-span-3 lg:ml-7 lg:mr-20 order-2 lg:order-1">
 		<p class="text-main-green text-sm leading-8 tracking-wider"><?php the_field( 'breakfast_description' ); ?></p>
-		<div class="swiper-buttons-wrapper block relative h-12 w-24 mt-5">
-			<div class="swiper-button-next b-swiper-button-next"></div>
-			<div class="swiper-button-prev b-swiper-button-prev"></div>
-		</div>
 	</div>
 	<div class="col-span-2 lg:col-span-8 order-1 lg:order-2 mb-10 lg:mb-0">
 	<?php 
@@ -25,7 +21,8 @@
 					</a>
 				<?php endforeach; ?>
 			</div>
-			
+			<div class="swiper-button-next b-swiper-button-next"><svg width="18" height="32" viewBox="0 0 18 32" xml:space="preserve"><path d="m2.121 2.121 14.008 14.007m0 .001L2.121 30.136" style="fill:none;stroke-linecap:round;stroke-width:2px"/></svg></div>
+			<div class="swiper-button-prev b-swiper-button-prev"><svg width="18" height="32" viewBox="0 0 18 32" xml:space="preserve"><path d="M16.13 30.137 2.122 16.13m0-.001L16.13 2.122" style="fill:none;stroke-linecap:round;stroke-width:2px"/></svg></div>
 		</div>
 	<?php endif; ?>
 	</div>
