@@ -183,13 +183,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.body.classList.contains("page-template-page-services")) {
       // Breakfast Section
       let breakfast = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.section-breakfast',
-          start:"top 50%",
-          end:"bottom top",
-          //markers: true,
-          toggleActions:"restart none none none"
-        },
         defaults: {
           duration: 1.2,
           autoAlpha: 0
@@ -201,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let gym = gsap.timeline({
         scrollTrigger: {
           trigger: '.section-gym',
-          start:"top 50%",
+          start:"-400px 50%",
           end:"bottom top",
           //markers: true,
           toggleActions:"restart none none none"
@@ -220,13 +213,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.body.classList.contains("post-type-archive-aktivitaten")) {
       // Environment Section
       let envir = gsap.timeline({
-        scrollTrigger: {
-          trigger: '.section-environment',
-          start:"top 50%",
-          end:"bottom top",
-          //markers: true,
-          toggleActions:"restart none none none"
-        },
         defaults: {
           duration: 1.2,
           autoAlpha: 0,
@@ -238,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let connec = gsap.timeline({
         scrollTrigger: {
           trigger: '.section-connection',
-          start:"top 50%",
+          start:"-400px 50%",
           end:"bottom top",
           //markers: true,
           toggleActions:"restart none none none"
