@@ -1,4 +1,4 @@
-<section class="section-intro pt-52 lg:pt-80 pb-10 lg:pb-24 px-8 xl:px-0">
+<section class="section-intro pt-52 lg:pt-80 pb-10 lg:pb-24 px-8 xl:px-0 overflow-hidden">
 	<div class="xl:container mx-auto grid grid-cols-1 lg:grid-cols-12 xl:px-8 xl:gap-7">
 		<div class="col-span-1 lg:col-span-3 flex flex-col lg:block">
 			<h1 class="section-intro-title text-5xl text-main-green font-extrabold mb-8 lg:mb-12 order-2 lg:order-1 invisible"><?php the_field( 'zimmer_intro_title', 'zimmer_archive' ); ?></h1>
