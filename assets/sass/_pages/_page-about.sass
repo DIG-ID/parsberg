@@ -2,3 +2,21 @@
     &__img
         img
             width: 100%
+
+.timeline
+    &-description
+        &__col
+            &::before
+                content: ""
+                position: absolute
+                top: 0
+                right: 0
+                width: 15px
+                height: 1px
+                border-top: 1px solid $main-green
+
+@media (min-width:1024px)
+    .timeline
+        &__img
+            img
+                padding-left: 6.3rem
