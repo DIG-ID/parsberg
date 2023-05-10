@@ -237,5 +237,33 @@ document.addEventListener("DOMContentLoaded", () => {
       .from( '.section-connection-small-title, .section-connection-description' ,{ x: '-50px', opacity: 0, stagger:0.2 })
       .from( '.section-connection-title, .section-connection-image' ,{ x: '50px', opacity: 0, stagger:0.25}, '<0.25');
     }
+
+    if (document.body.classList.contains("page-template-page-about")) {
+      let envir = gsap.timeline({
+        defaults: {
+          duration: 1.2,
+          autoAlpha: 0,
+        },
+      })
+      .from( '.about_timeline-section-title, .timeline-description__col' ,{ x: '-50px', opacity: 0, stagger:0.2 })
+      .from( '.timeline__img' ,{ x: '50px', opacity: 0, stagger:0.25}, '<0.25');
+      // Timeline Section
+      let connec = gsap.timeline({
+        scrollTrigger: {
+          trigger: '.about_geschichte-section',
+          start:"-400px 50%",
+          end:"bottom top",
+          //markers: true,
+          toggleActions:"restart none none none"
+        },
+        defaults: {
+          duration: 1.2,
+          autoAlpha: 0,
+        },
+      })
+      .from( '.about__intro-title, .about__intro-description' ,{ x: '-50px', opacity: 0, stagger:0.2 })
+      .from( '.geschichte_section__title, .geschichte_section__img' ,{ x: '50px', opacity: 0, stagger:0.25}, '<0.25')
+      .from( '.geschichte_section__ante-title' ,{ x: '50px', opacity: 0, stagger:0.25}, '<0.25');
+    }
   }, false);
 });
