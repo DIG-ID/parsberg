@@ -39,7 +39,10 @@ body.menu-open
         transform: rotate(-45deg)
         transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s
 
-
-.book-button-mobile--scrolled
-  @apply fixed left-0 right-0 bottom-0 w-full translate-x-0
+.book-button-wrapper
+  @apply fixed lg:hidden bottom-0 w-full flex justify-center items-center z-[41]
+  .book-button-mobile
+    @apply bg-main-beige text-main-green block mb-5 text-sm text-center font-normal tracking-widest uppercase no-underline py-4 px-16 lg:px-0 lg:w-full transition-all duration-500 ease-in-out hover:bg-darker-green hover:text-main-beige border border-main-beige whitespace-nowrap 
+    &--scrolled
+      @apply w-full mb-0
 
