@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //wait until images, links, fonts, stylesheets, and js is loaded
   window.addEventListener("load", () => {
     if (document.body.classList.contains("page-template-page-home")) {
+
       //Hero Section
       let herotl = gsap.timeline()
       .to(".section-hero-mask", {duration: 2, delay: 1, clipPath: 'inset(0 0 100% 0)'})
@@ -177,8 +178,6 @@ document.addEventListener("DOMContentLoaded", () => {
         togglerTl.timeScale(6).reverse();
       }
     });
-
-
 
     if (document.body.classList.contains("page-template-page-services")) {
       // Breakfast Section

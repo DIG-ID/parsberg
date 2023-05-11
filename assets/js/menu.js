@@ -1,13 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
   //Remove scroll from body when menu is open
 
-  $('.menu-button').click(function() {
+  $('.menu-button').on('click', () => {
     if ($('body').hasClass('menu-open')) {
       $('body').removeClass("overflow-hidden");
     } else {
       $('body').addClass("overflow-hidden");
     }
   });
+
+  $(window).on('scroll', () => {
+    const scroll = $(window).scrollTop();
+    $(".book-button-mobile").toggleClass("book-button-mobile--scrolled", scroll >= 10);
+  });
+
   //Sticky navigation
   const header = document.querySelector('.main-header');
   let lastScroll = 0;

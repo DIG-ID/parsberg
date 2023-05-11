@@ -6,12 +6,12 @@ endif;
 ?>
 <section class="section-hero flex items-center justify-center min-h-screen relative bg-center bg-no-repeat bg-cover" style="background-image: linear-gradient(0, rgb(46 86 89 / 50%), rgb(46 86 89 / 50%)), url('<?php echo $hbg; ?>')">
 <?php
-	$video_header = get_field('hero_section_video_file');
+	$video_header = get_field( 'hero_section_video_file' );
 	if( $video_header ):
 		$url = $video_header['url']; ?>
 		<div class="section-hero__video-wrapper absolute h-full w-full hidden lg:block" style="background: linear-gradient(0, rgb(46 86 89 / 50%), rgb(46 86 89 / 50%))">
-			<video class="section-hero-video object-cover object-center h-full w-full" autoplay muted loop>
-				<source src="<?php echo esc_html($url); ?>" type="video/webm" />
+			<video  autoplay muted loop class="section-hero-video object-cover object-center h-full w-full" loop="true" autoplay="autoplay" muted="muted">
+				<source src="<?php echo esc_html( $url ); ?>" />
 			</video>
 		</div>
 	<?php endif; ?>
@@ -23,11 +23,8 @@ endif;
 	<h1 class="section-hero-title font-sans font-semibold text-3xl lg:text-5xl text-center text-main-beige tracking-wider"><?php the_field( 'hero_section_title' ); ?></h1>
 	<a href="#home-intro" class="section-hero-scroll absolute hidden lg:flex justify-center bottom-20 left-2/4 -translate-x-2/4 border-2 w-[40px] h-[65px] pt-4 border-main-beige text-main-beige rounded-full"><span class="block w-1 h-3 bg-main-beige rounded-full animate-bounce"></span></a>
 	<div class="section-hero__video-wrapper flex flex-col lg:hidden absolute w-full bg-cover bottom-0 justify-center" style="background: linear-gradient(0, rgb(46 86 89 / 50%), rgb(46 86 89 / 50%))">
-		<video class="section-hero-video object-cover object-center h-full w-full" autoplay muted loop>
-			<source src="<?php echo esc_html($url); ?>" type="video/webm" />
+		<video autoplay muted loop class="section-hero-video object-cover object-center h-full w-full" playsinline="playsinline" loop="true" autoplay="autoplay" muted="muted">
+			<source src="<?php echo esc_html( $url ); ?>" />
 		</video>
 	</div>
-	<button class="block lg:hidden bg-main-beige text-main-green text-sm font-normal absolute bottom-12 tracking-widest uppercase no-underline py-3.5 px-16 button" type="button">
-		<?php esc_html_e( 'Jetzt Buchen', 'parsberg' ); ?>
-	</button>
 </section>

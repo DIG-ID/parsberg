@@ -1,3 +1,14 @@
+<?php
+$btn = get_field( 'direct_booking_section_button', 'option' );
+if ( $btn ) :
+	$btn_url    = $btn['url'];
+	$btn_title  = $btn['title'];
+	$btn_target = $btn['target'] ? $btn['target'] : '_self';
+	?>
+	<a class="bg-main-beige text-main-green absolute bottom-12 left-1/2 -translate-x-1/2 block lg:hidden text-sm text-center font-normal tracking-widest uppercase no-underline  py-4 px-16 lg:px-0 lg:w-full transition-all duration-500 ease-in-out hover:bg-darker-green hover:text-main-beige border border-main-beige z-50 whitespace-nowrap book-button-mobile" href="<?php echo esc_url( $btn_url ); ?>" target="<?php echo esc_attr( $btn_target ); ?>"><?php echo esc_html( $btn_title ); ?></a>
+	<?php
+endif;
+?>
 <footer class="main-footer bg-darker-green text-main-beige">
 	<div class="container mx-auto pt-16 pb-8 px-8 grid grid-cols-2 lg:grid-cols-12 xl:px-0">
 		<div class="footer-logo max-w-none mx-auto mb-8 col-span-2 lg:max-w-[120px] lg:mx-0">
