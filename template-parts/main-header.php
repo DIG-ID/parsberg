@@ -32,7 +32,7 @@
 				?>
 			</div>
 		</div>
-		<div class="navigation-mobile absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center text-main-beige z-40">
+		<div class="navigation-mobile absolute top-56 left-0 w-full h-screen flex flex-col items-center text-main-beige z-40">
 			<?php
 			wp_nav_menu(
 				array(
