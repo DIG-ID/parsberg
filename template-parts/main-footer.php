@@ -1,6 +1,6 @@
 <footer class="main-footer bg-darker-green text-main-beige">
 	<div class="container mx-auto pt-16 pb-8 px-8 grid grid-cols-2 lg:grid-cols-12 xl:px-0">
-		<div class="footer-logo max-w-[175px] mx-auto mb-8 col-span-2 lg:max-w-[120px] lg:mx-0">
+		<div class="footer-logo max-w-none mx-auto mb-8 col-span-2 lg:max-w-[120px] lg:mx-0">
 			<?php get_template_part( 'template-parts/main-logo' ); ?>
 		</div>
 		<div class="contacts-wrapper mb-8 flex-col col-span-2 lg:flex-col lg:col-start-4 lg:col-span-2 px-2 lg:px-0 gap-4 lg:gap-0">
