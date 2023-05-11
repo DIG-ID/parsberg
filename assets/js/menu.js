@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   $('.menu-button').click(function() {
     if ($('body').hasClass('menu-open')) {
-      $('body').removeClass("fixed");
+      $('body').removeClass("overflow-hidden");
     } else {
-      $('body').addClass("fixed");
+      $('body').addClass("overflow-hidden");
     }
   });
   //Sticky navigation
