@@ -40,9 +40,8 @@ body.menu-open
         transition: top 0.3s ease 0.1s, transform 0.3s ease-out 0.5s
 
 .book-button-wrapper
-  @apply fixed lg:hidden bottom-0 w-full flex justify-center items-center z-[41]
+  @apply fixed lg:hidden bottom-0 w-full flex justify-center items-center z-[41] overflow-hidden
   .book-button-mobile
-    @apply bg-main-beige text-main-green block mb-8 text-sm text-center font-normal tracking-widest uppercase no-underline py-4 px-16 lg:px-0 lg:w-full transition-all duration-500 ease-in-out hover:bg-darker-green hover:text-main-beige border border-main-beige whitespace-nowrap 
+    @apply bg-main-beige text-main-green block text-sm mb-8 text-center font-normal tracking-widest uppercase no-underline py-4 px-16 lg:px-0 lg:w-full transition-all duration-500 ease-in-out hover:bg-darker-green hover:text-main-beige border border-main-beige whitespace-nowrap 
     &--scrolled
       @apply w-full mb-0
-
