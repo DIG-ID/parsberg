@@ -26,12 +26,12 @@
 		</div>
 	<?php endif; ?>
 	</div>
-	<div class="col-span-1 lg:col-start-5 lg:col-span-2 lg:mt-20 order-3">
-		<h3 class="text-main-green text-sm font-semibold tracking-wider mb-10"><?php the_field( 'breakfast_schedule_title' ); ?></h3>
+	<div class="col-span-2 sm:col-span-1 mb-10 lg:mb-0 lg:col-start-5 lg:col-span-2 lg:mt-20 order-3">
+		<h3 class="text-main-green text-sm font-semibold tracking-wider mb-4 lg:mb-10"><?php the_field( 'breakfast_schedule_title' ); ?></h3>
 		<p class="text-main-green text-sm leading-8 tracking-wider"><?php the_field( 'breakfast_schedule_content' ); ?></p>
 	</div>
-	<div class="col-span-1 lg:col-start-7 lg:col-span-3 lg:mt-20 order-4">
-		<h3 class="text-main-green text-sm font-semibold tracking-wider mb-10"><?php the_field( 'breakfast_price_title' ); ?></h3>
+	<div class="col-span-2 sm:col-span-1 lg:col-start-7 lg:col-span-3 lg:mt-20 order-4">
+		<h3 class="text-main-green text-sm font-semibold tracking-wider mb-4 lg:mb-10"><?php the_field( 'breakfast_price_title' ); ?></h3>
 		<p class="text-main-green text-sm leading-8 tracking-wider"><?php the_field( 'breakfast_price_content' ); ?></p>
 	</div>
 </section>

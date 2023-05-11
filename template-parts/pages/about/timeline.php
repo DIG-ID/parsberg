@@ -18,7 +18,7 @@
                     echo wp_get_attachment_image( $image, 'full' );
                 } ?>
             </div>
-            <div class="row mb-6 lg:mb-14">
+            <div class="row mb-20 lg:mb-14">
                 <p class="flex items-center font-light text-main-green mb-10 lg:mb-0"><span class="block w-20 h-px bg-main-green mr-5"></span><?php the_sub_field( 'label_caption' ); ?></p>
             </div>
         <?php
