@@ -1,12 +1,17 @@
-<section class="section-not-found">
-	<div class="relative pt-40 mb-80 ">
-		<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 1024 768" class="fill-main-green w-full max-h-[500px]"><path d="m493.3 411.6-6.7-11.6-9.8 9.8v43.5l13.6 4.7 18.5 6.4v-44.9l-8.7-14.9-6.9 7zm-11.6 38.3v-38l3.9-3.9 4.8 8.2v36.7l-8.7-3zm22.3 7.8-8.7-3v-38l3.9-3.9 4.8 8.3v36.6z"/><path d="m1024 757.7-247.9-181v-384L1024 12.2v-6L772.9 189.1H251.2L0 4.8v6.1l248 181.9v384L0 757.8v6.1l251.2-183.4h184.7v.4l113.7 39.7V327.4l-99.5-34.7h8.1l94 32.8v254.9h220.6L1024 763.8v-6.1zm-583.2-216V367.5l23.4 8.2v89.7l9.2 3.2 16.9 27.8V559l-49.5-17.3V367.5v174.2zm28.3-79.8v-61.8l17.5-16.7 11.3 3.9 18.5 30.6v60.4l-47.3-16.4zm36.8 18-10.7 10.2v-13.9l10.7 3.7zm-15.6-5.4V487l-9.6-15.9 9.6 3.4zm-21.2-81.1v-16.1l12.3 4.3-12.3 11.8zm36.1-3.5 11.3 3.9v14.7l-11.3-18.6zm-56-24.7 43-20.2 42.9 50.2-85.9-30zm-8.4-1.4v-37.6l45.9 16-45.9 21.6zm103.9 249.8-103.9-36.2v-30.5l103.9 36.2v30.5zm0-35.7-49.5-17.3v-63.8l15.9-15.1 10.3 3.6v-89.7l23.4 8.2v174.1zm0-178.9-44.5-52 44.5 15.5V399zm0-68.1v26.4l-50.8-17.7-.9-.3-52.2-18.3v-26.4l103.9 36.3zm226.5 244.6H582.5V287.7H436.2l.5.2h-.5l-.2-.1v287.8H252.9V193.9h518.4v381.6z"/></svg>
-	</div>
-
-	<div class="container mx-auto flex flex-col justify-center items-center pb-40 absolute left-0 right-0 -bottom-10 w-full">
-		<h2 class="text-3xl font-bold mb-8"><br><?php esc_html_e( 'Ooops, Seite nicht gefunden!', 'parsberg' ); ?></h2>
-		<p class="text-2xl font-semibold"><?php esc_html_e( 'Die von Ihnen gesuchte Seite existiert nicht.', 'parsberg' ); ?></p>
-		<p class="text-sm font-light leading-8 tracking-wider mb-8"><?php esc_html_e( 'Sie können auf die Schaltfläche unten klicken, um zur Homepage zurückzukehren.', 'parsberg' ); ?></p>
-		<a class="block text-sm text-center font-normal tracking-widest uppercase py-4 px-14 border border-main-beige transition-all duration-500 ease-in-out hover:bg-main-green hover:border-main-green hover:text-main-beige" href="<?php echo esc_url( get_site_url( 'https' ) ); ?>"><?php esc_html_e( 'Zur Website gehen', 'parsberg' ); ?></a>
+<section class="section-not-found px-8 xl:px-0">
+	<div class="container pt-36 pb-24 max-w-6xl mx-auto">
+		<div class="row grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-4 lg:mx-auto items-center">
+			<div class="col-1 order-2 lg:order-1 flex flex-col justify-center items-center lg:justify-start lg:items-start">
+				<h2 class="text-3xl font-bold mb-8 text-center lg:text-start"><br><?php esc_html_e( 'Ooops, Seite nicht gefunden!', 'parsberg' ); ?></h2>
+				<p class="text-2xl font-semibold text-center lg:text-start"><?php esc_html_e( 'Die von Ihnen gesuchte Seite existiert nicht.', 'parsberg' ); ?></p>
+				<p class="text-sm font-light leading-8 tracking-wider mb-8 text-center lg:text-start"><?php esc_html_e( 'Sie können auf die Schaltfläche unten klicken, um zur Homepage zurückzukehren.', 'parsberg' ); ?></p>
+				<a class="block text-sm text-center font-normal tracking-widest uppercase py-4 px-14 border border-main-beige transition-all duration-500 ease-in-out hover:bg-main-green hover:border-main-green hover:text-main-beige" href="<?php echo esc_url( get_site_url( 'https' ) ); ?>"><?php esc_html_e( 'Zur Website gehen', 'parsberg' ); ?></a>
+			</div>
+			<div class="col-1 order-1 lg:order-2">
+				<figure class="w-[100px] lg:w-[170px] my-0 mx-auto">
+					<svg xml:space="preserve" viewBox="0 0 200 360" class="w-full h-auto object-cover fill-main-green"><path d="m84.3 144.1-6.7-11.5-9.7 9.7v43l13.4 4.7 4.8 1.7 13.4 4.7V152l-8.6-14.7-6.6 6.8zm-2.9 40.8-8.6-3v-37.6l3.8-3.8 4.7 8.2v36.2zm13.4 4.7-8.6-3V149l3.8-3.8 4.8 8.2v36.2zM122.1 241.4c.8.3 1.6.4 2.3.4 1.3 0 2.5-.4 3.5-1.1 2-1.4 3.2-4 3.2-7.1 0-5.2-3.3-10.4-7.4-11.9-2.1-.7-4.2-.5-5.9.7-2 1.4-3.2 4-3.2 7.1.1 5.2 3.4 10.4 7.5 11.9zm-1.4-15.1c.1-.1.3-.2.7-.2.2 0 .4 0 .7.1 2 .7 4.2 3.9 4.2 7.3 0 1.7-.6 2.8-1.1 3.1-.1.1-.6.4-1.5.1-2-.7-4.2-3.9-4.2-7.3.1-1.7.6-2.7 1.2-3.1z"/><path d="M15 9.4V311h12.7v.1l112.1 39.5V61.7L42 28.3h10.5l91.9 31.2V311H185V9.4H15zm12.7 296.8h-9.1V14.7l9.1 9.1v282.4zM135 343.8 32.6 307.7v-30.1L135 313.7v30.1zM60.5 193.7v-61l17.3-16.5 11.1 3.9 18.3 30.3v59.7l-46.7-16.4zm36.2 17.9-10.5 10v-13.7l10.5 3.7zm-15.3-5.4v12.4l-9.5-15.7 9.5 3.3zM60.5 126v-15.9l12.2 4.3L60.5 126zm35.5-3.4 11.1 3.9V141L96 122.6zM40.8 98.1l42.4-19.9 42.3 49.7-84.7-29.8zm-8.2-1.5V59.5l45.2 15.9-45.2 21.2zm23 11.8v88.7l9.1 3.2 16.6 27.6v61.7l-48.8-17.2V100.3l23.1 8.1zM135 308.5l-48.8-17.2v-63.1l15.6-14.9 10.1 3.6v-88.7l23 8.1v172.2zm0-176.9L91.2 80.1 135 95.6v36zm0-67.2v26.1L84.9 72.8l-.9-.3-51.4-18.1V28.3L135 64.4zM29 21.7 20.3 13h158.2l-8.7 8.7H29zm152.4 284.5h-8.8V22.4l8.8-8.8v292.6z"/></svg>
+				</figure>
+			</div>
+		</div>
 	</div>
 </section>
