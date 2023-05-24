@@ -296,21 +296,21 @@ add_action( 'wp_enqueue_scripts', 'parsberg_theme_enqueue_styles' );
 /**
  * Enqueue styles and scripts
  */
-function consent_mode_script() {
+/*function consent_mode_script() {
 	// Enqueue your custom script code with a lower priority.
-	wp_enqueue_script( 'consent-mode-script', get_stylesheet_directory_uri() . '/assets/js/consent-mode.js', array(), '1.0', false );
+	wp_enqueue_script( 'consent_mode_script', get_stylesheet_directory_uri() . '/asset/js/consent-mode.js', array(), '1.0', false );
 }
 
 // Hook the function to the wp_enqueue_scripts action with a higher priority.
-add_action( 'wp_enqueue_scripts', 'consent_mode_script', 1 );
+add_action( 'wp_enqueue_scripts', 'onsent_mode_script', 1 );*/
 
 //Google Map Init
 function my_acf_init() {
 	if ( is_admin() ) :
-		acf_update_setting( 'google_api_key', 'AIzaSyCB2RShyxiN7xPsQy1QI_SbqXXjW5p08S0' );
+	acf_update_setting('google_api_key', 'AIzaSyCB2RShyxiN7xPsQy1QI_SbqXXjW5p08S0');
 	endif;
 }
-add_action( 'acf/init', 'my_acf_init' );
+add_action('acf/init', 'my_acf_init');
 
 /**
  * Wrap the post thumbnail image in a figure element only in the blog posts and project posts.
