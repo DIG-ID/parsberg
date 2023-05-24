@@ -298,7 +298,7 @@ add_action( 'wp_enqueue_scripts', 'parsberg_theme_enqueue_styles' );
  */
 function consent_mode_script() {
 	// Enqueue your custom script code with a lower priority.
-	wp_enqueue_script( 'consent_mode_script', get_stylesheet_directory_uri() . '/asset/js/consent-mode.js', array(), '1.0', false );
+	wp_enqueue_script( 'consent-mode-script', get_stylesheet_directory_uri() . '/assets/js/consent-mode.js', array(), '1.0', false );
 }
 
 // Hook the function to the wp_enqueue_scripts action with a higher priority.
