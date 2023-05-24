@@ -302,7 +302,7 @@ function consent_mode_script() {
 }
 
 // Hook the function to the wp_enqueue_scripts action with a higher priority.
-add_action( 'wp_enqueue_scripts', 'onsent_mode_script', 1 );
+add_action( 'wp_enqueue_scripts', 'consent_mode_script', 1 );
 
 //Google Map Init
 function my_acf_init() {
