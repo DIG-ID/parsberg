@@ -18,7 +18,7 @@ mix
   })
 
   .browserSync({
-    proxy: "parsberg.local",
+    proxy: "parsberg.digid",
     files: ["./**/*.php", "./dist/js/*.js", "./dist/css/*.css"]
   })
   .disableNotifications();

@@ -24,7 +24,7 @@
   "homepage": "https://github.com/DIG-ID/parsberg#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "browser-sync": "^2.27.11",
+    "browser-sync": "^3.0.4",
     "browser-sync-webpack-plugin": "^2.3.0",
     "jquery": "^3.6.3",
     "laravel-mix": "^6.0.49",
