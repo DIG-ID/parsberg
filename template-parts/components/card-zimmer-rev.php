@@ -5,7 +5,7 @@
 		<div class="image-wrapper relative col-span-1 lg:col-span-8 mb-12 lg:mb-0">
 			<a href="<?php the_permalink(); ?>" class="group block clip-square">
 				<span class="overlay absolute top-0 left-0 right-0 bottom-0 bg-main-green mix-blend-lighten transition-all duration-500 ease-in-out opacity-75 group-hover:opacity-10"></span>
-				<img class="w-full object-cover max-h-[560px]" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_caption(); ?>">
+				<img class="w-full object-cover max-h-[560px]" src="<?php the_post_thumbnail_url(); ?>" alt="<?php the_post_thumbnail_caption(); ?>" loading="lazy">
 			</a>
 		</div>
 		<?php
