@@ -19,6 +19,17 @@ body
   background-color: #F9F5F0
   position: relative
 
+.skip-link
+  @apply hidden lg:inline-flex
+  position: absolute
+  top: -100%
+  left: 0
+  z-index: 9999
+  padding-left: 2rem
+  @apply bg-main-beige text-main-green text-sm font-normal tracking-widest uppercase py-4 px-16 border border-main-beige transition-all duration-500 ease-in-out
+  &:focus
+    top: 1rem
+
 #main-content
   overflow-x: hidden
 
